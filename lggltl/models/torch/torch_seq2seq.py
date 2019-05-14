@@ -23,12 +23,12 @@ src, tar = '../../data/hard_pc_src_syn2_dup.txt', '../../data/hard_pc_tar_syn2_d
 SEED = 1; MODE = 0;
 random.seed(SEED)
 torch.manual_seed(SEED) if not use_cuda else torch.cuda.manual_seed(SEED)
-print('Running with random seed {0}'.format(SEED))
+#print('Running with random seed {0}'.format(SEED))
 
 input_lang, output_lang, pairs, MAX_LENGTH, MAX_TAR_LENGTH = prepareData(src, tar, False)
 random.shuffle(pairs)
-print('Maximum source sentence length: {0}'.format(MAX_LENGTH))
-print(random.choice(pairs))
+#print('Maximum source sentence length: {0}'.format(MAX_LENGTH))
+#print(random.choice(pairs))
 
 embed_size = 50
 hidden_size = 256
@@ -45,22 +45,36 @@ if use_cuda:
     decoder1 = decoder1.cuda()
     com_attn_decoder1 = com_attn_decoder1.cuda()
 
-SAVE = False
+SAVE = True
 CLI = False
 
 
 def main():
     #n_iters = 1000
     #n_iters = 5000
-    n_iters = 10000
+    n_iters = 8500
+    #n_iters = 10000
     #n_iters = 1000000
     if MODE == 0:
-        trainIters(input_lang, output_lang, encoder1, attn_decoder1, pairs, n_iters, MAX_LENGTH, print_every=500)
+        split = int(len(pairs)*0.2)
+        train_pairs, test_pairs = pairs[split:], pairs[:split]
+        for (s, t) in train_pairs:
+            with open('./TRAIN_SRC', 'a') as f:
+                f.write(str(s)+"\n")
+            with open('./TRAIN_TAR', 'a') as f:
+                f.write(str(t)+"\n")
+        for (s, t) in test_pairs:
+            with open('./TEST_SRC', 'a') as f:
+                f.write(str(s)+"\n")
+            with open('./TEST_TAR', 'a') as f:
+                f.write(str(t)+"\n")
+        trainIters(input_lang, output_lang, encoder1, attn_decoder1, train_pairs, n_iters, MAX_LENGTH, print_every=500)
         encoder1.eval()
         attn_decoder1.eval()
         print('\n\nEvaluating!\n')
         #evaluateRandomly(input_lang, output_lang, encoder1, attn_decoder1, pairs, MAX_LENGTH)
-        evaluateSelected(input_lang, output_lang, encoder1, attn_decoder1, pairs, MAX_LENGTH)
+        evaluateSelected(input_lang, output_lang, encoder1, attn_decoder1, test_pairs, MAX_LENGTH)
+        evaluateTraining(input_lang, output_lang, encoder1, attn_decoder1, train_pairs, MAX_LENGTH)
 
     elif MODE == 1:
         trainIters(input_lang, output_lang, encoder1, attn_decoder1, pairs, 10000, MAX_LENGTH, print_every=500)

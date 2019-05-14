@@ -53,9 +53,15 @@ CLI = False
 def text_to_ltl(lang, ltl):
     # add path to the checkpoint folder below, this will load the encoder and decoder models
     path = '../../models/torch/checkpoint/'
+    #path = '../../models/torch/checkpoint-gpu/'
+
+    print('Loading checkpoints')
+
+    print(encoder1.state_dict)
+    print(attn_decoder1.state_dict)
     encoder1.load_state_dict(torch.load(path + 'encoder'))
     attn_decoder1.load_state_dict(torch.load(path + 'decoder'))
-    print('Loaded checkpoints!')
+    print('Finished loaded checkpoints!')
     # set it to evaluate mode
     encoder1.eval()
     attn_decoder1.eval()
@@ -66,6 +72,7 @@ def text_to_ltl(lang, ltl):
     pairs = [[lang, ltl]]
     print('Pairs, ', pairs)
     ltl = evaluateSelected(input_lang, output_lang, encoder1, attn_decoder1, pairs, MAX_LENGTH)
+
     return ltl
 
 if __name__ == '__main__':

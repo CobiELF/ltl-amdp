@@ -401,8 +401,8 @@ def run():
     print(test)
 
 if __name__ == '__main__':
-    #load_data()
-    #clean_data()
+    load_data()
+    clean_data()
     #old_duplicate_data()
     duplicate_data()
 

@@ -1,7 +1,6 @@
 #!/bin/bash
-cd /home/rpatel59/nlp/ltl-amdp/venv/bin
+cd /home/ndanas/repos/ltl-amdp/venv/bin
 source activate
 cd
-cd /home/rpatel59/nlp/ltl-amdp/lggltl/models/torch
-python torch_seq2seq.py
-
+cd /home/ndanas/repos/ltl-amdp/lggltl/models/torch
+python3 torch_seq2seq.py

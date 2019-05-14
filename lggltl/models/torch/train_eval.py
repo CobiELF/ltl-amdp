@@ -260,6 +260,7 @@ def evaluate2(input_lang, output_lang, encoder, decoder, sentence, max_length):
 
 def evaluateSelected(input_lang, output_lang, encoder, decoder, pairs, max_length, n=10):
     n = 10
+    n = len(pairs)
     items = []
     for i in range(n):
         pair = random.choice(pairs)
