@@ -1,0 +1,463 @@
+Reading lines...
+Read 6185 sentence pairs
+Counting words...
+Counted words:
+ALL_SRC 129
+ALL_TAR 31
+Reading lines...
+Read 1237 sentence pairs
+Counting words...
+Counted words:
+TEST_SRC 123
+TEST_TAR 31
+sentence, trueltl, rank, variants, goodvariants
+"go to the purple room then go to landmark one .", "F ( purple_room & F ( landmark_1 ) )", 0, 1024, 24
+"navigate to the second floor and avoid landmark two .", "F ( second_floor & ~landmark_2 )", 0, 128, 4
+"first move to landmark two then navigate to the orange room .", "F ( landmark_2 & F ( orange_room ) )", 0, 1024, 8
+"go to the third floor then go to landmark two .", "F ( third_floor & F ( landmark_2 ) )", 0, 1024, 12
+"from the third floor navigate to the first floor .", "F ( third_floor & F ( first_floor ) )", 2, 1024, 40
+"go through the blue room before navigating to landmark three .", "F ( blue_room & F ( landmark_3 ) )", 0, 1024, 24
+"go to landmark three by avoiding the orange room and then stay there or continue to the orange room .", "~ ( orange_room ) U ( landmark_3 )", 0, 512, 24
+"go to landmark two before going to the orange room", "F ( landmark_2 & F ( orange_room ) )", 0, 1024, 8
+"always avoid the green room and go to the orange room .", "F ( orange_room & ~green_room )", 0, 128, 4
+"move to the purple room and then the red room .", "F ( purple_room & F ( red_room ) )", 2, 1024, 20
+"go to the orange room without going to the green room . if you reached the orange room now you can go to the green room .", "~ ( green_room ) U ( orange_room )", 0, 512, 4
+"go to landmark two and avoid the green room", "F ( landmark_2 & ~landmark_1 )", -1, 128, 4
+"go to landmark three then head to the third floor .", "F ( landmark_3 & F ( third_floor ) )", 0, 1024, 24
+"stay in the purple room and go to landmark one", "F ( landmark_1 ) & G ( purple_room )", 0, 1024, 4
+"go to landmark two through landmark one .", "F ( landmark_1 & F ( landmark_2 ) )", 0, 1024, 24
+"stay on the second floor to get to landmark one .", "F ( landmark_1 ) & G ( second_floor )", 0, 1024, 4
+"move to the blue room and then move to landmark three .", "F ( blue_room & F ( landmark_3 ) )", 0, 1024, 24
+"avoid the first floor and the third floor and go to landmark three .", "F ( landmark_3 ) & G ( first_floor )", 2, 1024, 4
+"avoid landmark one and proceed to landmark three", "F ( landmark_3 & ~landmark_1 )", 2, 128, 8
+"always avoid landmark three and navigate to the orange room .", "F ( orange_room & ~landmark_3 )", 0, 128, 4
+"go to the orange room and go down to the onest floor .", "F ( orange_room & F ( first_floor ) )", 0, 1024, 32
+"move to the blue room without leaving the second floor .", "F ( blue_room ) & G ( second_floor )", 0, 1024, 8
+"go to the yellow room avoiding landmark two . if you reached the yellow room then you may go to landmark two .", "~ ( landmark_2 ) U ( yellow_room )", 2, 512, 16
+"always proceed to landmark one and then to the second floor .", "F ( landmark_1 & F ( second_floor ) )", 0, 1024, 12
+"move to landmark three . do n t change floors if already on twond floor .", "F ( landmark_3 ) & G ( first_floor )", 4, 1024, 8
+"head to the orange room but make sure to go through the blue room first .", "F ( blue_room & F ( orange_room ) )", 0, 1024, 16
+"avoid the red room until after navigating to the orange room .", "~ ( red_room ) U ( orange_room )", 0, 512, 8
+"go through the green room to landmark one .", "F ( green_room & F ( landmark_1 ) )", 0, 1024, 16
+"avoid landmark three and go to the second floor .", "F ( first_floor & ~landmark_3 )", -1, 128, 8
+"always avoid going to landmark three through the green room", "~ ( green_room ) U ( landmark_3 )", 0, 512, 16
+"go to the purple room through the blue room", "F ( blue_room & F ( purple_room ) )", 0, 1024, 16
+"go to orange room but do not go to green room .", "F ( orange_room & ~green_room )", 0, 128, 8
+"go to the orange room through the third floor .", "F ( third_floor & F ( orange_room ) )", 0, 1024, 28
+"go to landmark three but do not first go through the green room .", "~ ( green_room ) U ( landmark_3 )", 0, 512, 16
+"avoid the orange room until navigating to the red room .", "~ ( orange_room ) U ( red_room )", 6, 512, 16
+"avoid the purple room until reaching the second floor .", "~ ( purple_room ) U ( second_floor )", 0, 512, 24
+"navigate through landmark one then go to landmark three .", "F ( landmark_1 & F ( landmark_3 ) )", 0, 1024, 24
+"go to the second floor and then head to landmark one .", "F ( second_floor & F ( landmark_1 ) )", 0, 1024, 12
+"go from onest floor to landmark two .", "F ( first_floor & F ( landmark_2 ) )", 0, 1024, 20
+"go to the first floor then move to the green room .", "F ( first_floor & F ( green_room ) )", 0, 1024, 8
+"avoid landmark two until after the orange room", "~ ( landmark_2 ) U ( orange_room )", 0, 512, 16
+"go to landmark two always avoiding the purple room .", "F ( landmark_2 & ~purple_room )", 0, 128, 4
+"navigate to the first floor through the third floor .", "F ( third_floor & F ( first_floor ) )", 0, 1024, 8
+"avoid the green room and navigate to the yellow room .", "F ( yellow_room & ~green_room )", 0, 128, 4
+"go to or through the red room always avoid going to the red room through the orange room", "~ ( orange_room ) U ( red_room )", 0, 512, 4
+"go to third floor without going into the blue room", "F ( third_floor & ~blue_room )", 0, 128, 8
+"avoid the red room and navigate to the green room .", "F ( green_room & ~red_room )", 0, 128, 8
+"move to the red room without leaving the second floor .", "F ( red_room ) & G ( second_floor )", 0, 1024, 8
+"go to the third floor via the blue room .", "F ( blue_room & F ( third_floor ) )", 0, 1024, 24
+"go to the yellow room then go to the green room .", "F ( yellow_room & F ( green_room ) )", 1, 1024, 20
+"go through the orange room then to the third floor .", "F ( orange_room & F ( third_floor ) )", 0, 1024, 24
+"navigate to the red room but never go to the green room .", "F ( red_room & ~green_room )", 0, 128, 4
+"go to the red room and go down to the onest floor .", "F ( red_room & F ( second_floor ) )", 8, 1024, 64
+"move to the red room but ensure to go to the twond floor first .", "F ( third_floor & F ( red_room ) )", -1, 1024, 20
+"without leaving the first floor go to the purple room .", "F ( purple_room ) & G ( first_floor )", 0, 1024, 4
+"go from twond floor to purple room .", "F ( second_floor & F ( purple_room ) )", -1, 1024, 4
+"avoid landmark three and go to landmark two .", "F ( landmark_2 & ~landmark_3 )", 2, 128, 4
+"go through the yellow room before going to landmark one", "F ( yellow_room & F ( landmark_1 ) )", -1, 16384, 16
+"navigate through landmark two to the third floor .", "F ( landmark_2 & F ( third_floor ) )", 0, 1024, 24
+"always go to landmark two before navigating to the green room .", "F ( landmark_2 & F ( green_room ) )", 0, 1024, 8
+"go to landmark two and avoid the orange room .", "F ( landmark_2 & ~orange_room )", 0, 128, 4
+"go from the second floor to landmark two .", "F ( second_floor & F ( landmark_2 ) )", 0, 1024, 20
+"remain on the first floor and navigate to the green room .", "F ( green_room ) & G ( first_floor )", 0, 1024, 4
+"go through the blue room before going to the green room .", "F ( blue_room & F ( green_room ) )", 0, 1024, 24
+"go to landmark two while avoiding going through any other objects", "F ( landmark_2 ) & G ( third_floor )", 0, 1024, 4
+"always go to landmark two before navigating to the orange room .", "F ( landmark_2 & F ( orange_room ) )", 0, 1024, 12
+"navigate through landmark two and go to the blue room .", "F ( landmark_2 & F ( blue_room ) )", 0, 1024, 12
+"go to second floor without going into the yellow room", "F ( second_floor & ~yellow_room )", 0, 128, 4
+"navigate to the green room but never go to the red room .", "F ( green_room & ~red_room )", 0, 128, 4
+"avoid landmark one and go to landmark three . if you ve reached landmark three then you can go to landmark one .", "~ ( landmark_1 ) U ( landmark_3 )", 8, 512, 24
+"avoid landmark two until you pass through yellow room .", "~ ( landmark_2 ) U ( yellow_room )", 0, 512, 32
+"navigate to the purple room always avoiding the blue room .", "F ( purple_room & ~blue_room )", 0, 128, 8
+"avoid the orange room and go to landmark three .", "F ( landmark_3 & ~orange_room )", 0, 128, 4
+"avoid landmark two until after the red room", "~ ( landmark_2 ) U ( red_room )", 0, 512, 16
+"avoid the first and third floor and go to landmark two .", "F ( landmark_2 ) & G ( third_floor )", 0, 1024, 12
+"go to landmark one via the first floor .", "F ( first_floor & F ( landmark_1 ) )", 0, 1024, 12
+"go to the purple room through the twond floor", "F ( first_floor & F ( purple_room ) )", 1, 1024, 12
+"go to landmark one by only navigating within the green room .", "F ( landmark_1 ) & G ( green_room )", 0, 1024, 4
+"go to landmark two and remain within the green room .", "F ( landmark_2 ) & G ( green_room )", 0, 1024, 4
+"move to the third floor by going through the red room", "F ( red_room & F ( third_floor ) )", 0, 1024, 36
+"avoid the landmark three and go to the second floor .", "F ( second_floor & ~landmark_3 )", 0, 128, 8
+"go to landmark one avoiding the yellow room . then go to the yellow room or stay on landmark one .", "~ ( yellow_room ) U ( landmark_1 )", 0, 512, 16
+"go from the purple room to the orange room", "F ( purple_room & F ( orange_room ) )", 0, 1024, 8
+"avoid the red room until going through landmark one .", "~ ( red_room ) U ( landmark_1 )", 7, 512, 16
+"do n t leave the green room and go to landmark three .", "F ( landmark_3 ) & G ( green_room )", 0, 1024, 4
+"go to the purple room without going to the yellow room . if you reached the purple room now you can go to the yellow room .", "~ ( yellow_room ) U ( purple_room )", 0, 512, 12
+"avoid the orange room until landmark one .", "~ ( orange_room ) U ( landmark_1 )", 0, 512, 4
+"go to the purple room through the second floor .", "F ( second_floor & F ( purple_room ) )", 0, 1024, 12
+"go to the twond floor while always avoiding the red room", "F ( first_floor & ~red_room )", -1, 128, 8
+"go to the green room while avoiding the red room and if you have reached the green room then you can go to the red room .", "~ ( red_room ) U ( green_room )", 1, 512, 16
+"go to landmark three avoiding the first and third floors .", "F ( landmark_3 ) & G ( second_floor )", -1, 1024, 4
+"go to or through landmark two . always avoid going to landmark two through landmark three", "~ ( landmark_3 ) U ( landmark_2 )", 2, 512, 24
+"go to landmark three and avoid the green room", "F ( landmark_3 & ~landmark_1 )", -1, 128, 2
+"navigate to the red room always avoiding the blue room .", "F ( red_room & ~blue_room )", 0, 128, 4
+"always avoid landmark one and navigate to the yellow room .", "F ( yellow_room & ~landmark_1 )", 0, 128, 8
+"go through the yellow room then to the second floor .", "F ( yellow_room & F ( second_floor ) )", 0, 1024, 16
+"navigate to the yellow room before you go to landmark three .", "F ( yellow_room & F ( landmark_3 ) )", 0, 1024, 24
+"go to purple room but do not go to red room .", "F ( purple_room & ~red_room )", 0, 128, 8
+"navigate to the orange room by passing through the third floor .", "F ( third_floor & F ( orange_room ) )", 0, 1024, 20
+"go to the yellow room then go to the third floor .", "F ( yellow_room & F ( third_floor ) )", 0, 1024, 12
+"avoid the green room until you navigate to the third floor .", "~ ( green_room ) U ( third_floor )", 0, 512, 24
+"move to the purple room first then travel to landmark one .", "F ( purple_room & F ( landmark_1 ) )", 0, 1024, 24
+"go to landmark three then landmark one .", "F ( landmark_3 & F ( landmark_1 ) )", 0, 1024, 24
+"go to landmark three by only stepping in the orange room .", "F ( landmark_3 ) & G ( orange_room )", 0, 1024, 4
+"go to the green room by first going through the red room .", "F ( red_room & F ( green_room ) )", 6, 1024, 40
+"avoid the orange room until reaching the second floor .", "~ ( orange_room ) U ( second_floor )", 0, 512, 4
+"stay away from the purple room and go to landmark three .", "F ( landmark_3 & ~purple_room )", 0, 128, 2
+"go to the purple room avoiding landmark one .", "F ( purple_room & ~landmark_1 )", 0, 128, 8
+"stay in the blue room and go to landmark three and stop", "F ( landmark_3 ) & G ( blue_room )", 0, 1024, 4
+"go through landmark three to the red room .", "F ( landmark_3 & F ( red_room ) )", 0, 1024, 12
+"avoid the green room and go to the third floor . if you reached the third floor then you may go to the green room or just stay on the third floor .", "~ ( green_room ) U ( third_floor )", 0, 512, 24
+"navigate through landmark three and go to the yellow room .", "F ( landmark_3 & F ( yellow_room ) )", 0, 1024, 24
+"always go through landmark two and then to the yellow room .", "F ( landmark_2 & F ( yellow_room ) )", 0, 1024, 12
+"avoid the purple room until you enter the yellow room .", "~ ( purple_room ) U ( yellow_room )", 0, 512, 16
+"stay in the yellow room and go to landmark three .", "F ( landmark_3 ) & G ( yellow_room )", 0, 1024, 4
+"go to the purple room avoiding landmark one .", "F ( purple_room & ~landmark_1 )", 0, 128, 8
+"go to the yellow room through landmark three", "F ( landmark_3 & F ( yellow_room ) )", 0, 1024, 40
+"avoid the yellow room until after you ve gone to the red room .", "~ ( yellow_room ) U ( red_room )", 0, 512, 12
+"go to or through the orange room always avoid going to the orange room through landmark one", "~ ( landmark_1 ) U ( orange_room )", 0, 512, 8
+"navigate to the second floor before going to the first floor .", "F ( second_floor & F ( first_floor ) )", 2, 1024, 36
+"while remaining within the yellow room go to landmark one .", "F ( landmark_1 ) & G ( yellow_room )", 0, 1024, 4
+"stay on the first floor while going to the blue room .", "F ( blue_room ) & G ( first_floor )", 0, 1024, 8
+"go through the red room to the second floor .", "F ( red_room & F ( second_floor ) )", 0, 1024, 24
+"go to landmark one and avoid the purple room .", "F ( landmark_1 & ~purple_room )", 0, 128, 8
+"go through the second floor to the orange room .", "F ( second_floor & F ( orange_room ) )", 0, 1024, 4
+"avoid the green room until you enter the purple room .", "~ ( green_room ) U ( purple_room )", 0, 512, 24
+"avoid landmark one until you pass through green room .", "~ ( landmark_1 ) U ( green_room )", 0, 512, 32
+"go to the orange room through the twond floor", "F ( first_floor & F ( orange_room ) )", -1, 1024, 20
+"go to the first floor then go to landmark one .", "F ( first_floor & F ( landmark_1 ) )", 0, 1024, 4
+"go to landmark two only through the twond floor", "F ( landmark_2 ) & G ( second_floor )", -1, 1024, 4
+"avoid the yellow room and navigate to the red room .", "F ( red_room & ~yellow_room )", 3, 128, 4
+"go to landmark one by only stepping in the red room .", "F ( landmark_1 ) & G ( red_room )", 0, 1024, 8
+"move to the first floor by going through the green room", "F ( green_room & F ( first_floor ) )", 0, 1024, 24
+"remain on the onest floor and go directly to the red room .", "F ( red_room ) & G ( second_floor )", -1, 1024, 4
+"go to the orange room through the first floor .", "F ( first_floor & F ( orange_room ) )", 0, 1024, 20
+"avoid landmark one and go to the green room .", "F ( green_room & ~landmark_1 )", 0, 128, 8
+"go to the orange room while avoiding the yellow room and if you have reached the orange room then you can go to the yellow room .", "~ ( yellow_room ) U ( orange_room )", 0, 512, 8
+"avoid the red room until navigating to the yellow room .", "~ ( red_room ) U ( yellow_room )", 0, 512, 12
+"avoid the orange room and go to the first floor .", "F ( first_floor & ~orange_room )", 0, 128, 8
+"move towards blue room and then to third floor .", "F ( blue_room & F ( third_floor ) )", 0, 1024, 56
+"remain on the second floor while going to the green room .", "F ( green_room ) & G ( second_floor )", 0, 1024, 8
+"first move to landmark two then navigate to the green room .", "F ( landmark_2 & F ( green_room ) )", 0, 1024, 8
+"go to landmark two while always avoiding the green room", "F ( landmark_2 & ~green_room )", 0, 128, 2
+"go to the orange room before going to the purple room .", "F ( orange_room & F ( purple_room ) )", 0, 1024, 24
+"navigate through landmark one to the third floor .", "F ( landmark_1 & F ( third_floor ) )", 0, 1024, 24
+"go through landmark three and navigate to the purple room .", "F ( landmark_3 & F ( purple_room ) )", 0, 1024, 24
+"move to the green room and then move to landmark three .", "F ( green_room & F ( landmark_3 ) )", 0, 1024, 12
+"navigate to the red room always avoiding the orange room .", "F ( red_room & ~orange_room )", 0, 128, 4
+"move to the blue room but ensure to go to the twond floor first .", "F ( second_floor & F ( blue_room ) )", -1, 1024, 16
+"go through the yellow room first then go to the green room .", "F ( yellow_room & F ( green_room ) )", 0, 1024, 16
+"avoid the yellow room until you navigate to landmark three .", "~ ( yellow_room ) U ( landmark_3 )", 0, 512, 12
+"do n t go into the green room until going to landmark two", "~ ( green_room ) U ( landmark_2 )", 0, 512, 16
+"go to landmark one and then go to the onest floor .", "F ( landmark_1 & F ( first_floor ) )", 0, 1024, 24
+"go to the yellow room without touching landmark one .", "F ( yellow_room & ~landmark_1 )", 0, 128, 8
+"proceed to landmark two but avoid landmark three on the way . if you have reached landmark two then you can proceed to landmark three .", "~ ( landmark_3 ) U ( landmark_2 )", 6, 512, 16
+"go to the second floor and then go to the yellow room .", "F ( second_floor & F ( yellow_room ) )", 0, 1024, 8
+"do directly to landmark three without leaving the green room .", "F ( landmark_3 ) & G ( green_room )", 0, 1024, 4
+"go to the first floor after you go to the third floor .", "F ( third_floor & F ( first_floor ) )", 0, 1024, 40
+"navigate through landmark three then go to landmark two .", "F ( landmark_3 & F ( landmark_2 ) )", 1, 1024, 12
+"always avoid the red room to navigate to landmark three .", "F ( landmark_3 & ~red_room )", 0, 128, 4
+"go to the blue room by avoiding landmark two and then stay in the blue room or continue to landmark two", "~ ( landmark_2 ) U ( blue_room )", 0, 512, 16
+"go through landmark two to the purple room .", "F ( landmark_2 & F ( purple_room ) )", 0, 1024, 8
+"go to the third floor but do not go through the blue room first .", "~ ( blue_room ) U ( third_floor )", 0, 512, 8
+"navigate to the first floor avoiding landmark one .", "F ( first_floor & ~landmark_1 )", 0, 128, 8
+"go through the purple room before going to landmark two", "F ( purple_room & F ( landmark_2 ) )", -1, 16384, 0
+"go to the yellow room without touching landmark one .", "F ( yellow_room & ~landmark_1 )", 0, 128, 8
+"go to the twond floor and then go to the purple room .", "F ( third_floor & F ( purple_room ) )", -1, 1024, 8
+"navigate through landmark one and go to the red room .", "F ( landmark_1 & F ( red_room ) )", 0, 1024, 24
+"avoid the green room and travel to the red room .", "F ( red_room & ~green_room )", 0, 128, 2
+"go to landmark one while avoiding the first and third floor .", "F ( landmark_1 ) & G ( third_floor )", 0, 1024, 4
+"go to landmark one and always avoid the blue room", "F ( landmark_1 & ~blue_room )", 0, 128, 4
+"avoid landmark three and go to landmark two . if you ve reached landmark two then you can go to landmark three .", "~ ( landmark_3 ) U ( landmark_2 )", 0, 512, 16
+"go to landmark two avoiding the red room . then go to the red room or stay on landmark two .", "~ ( red_room ) U ( landmark_2 )", 0, 512, 16
+"do not go into the green room until going to landmark two", "~ ( green_room ) U ( landmark_2 )", 0, 512, 16
+"go through the blue room and navigate to the third floor .", "F ( blue_room & F ( third_floor ) )", 0, 1024, 24
+"go to the purple room through the first floor .", "F ( first_floor & F ( purple_room ) )", 0, 1024, 12
+"go to landmark one avoiding the first and third floors .", "F ( landmark_1 ) & G ( third_floor )", 0, 1024, 4
+"go to landmark three but remain on the third floor .", "F ( landmark_3 ) & G ( third_floor )", 0, 1024, 4
+"go to or through the twond floor while avoiding going through the green room", "~ ( green_room ) U ( first_floor )", -1, 512, 12
+"navigate to landmark three through the third floor .", "F ( third_floor & F ( landmark_3 ) )", 0, 1024, 12
+"do n t go into the red room until going to landmark one", "~ ( red_room ) U ( landmark_1 )", 2, 512, 16
+"avoid landmark three until you go to the blue room .", "~ ( landmark_3 ) U ( blue_room )", 0, 512, 32
+"go to the red room through the blue room .", "F ( blue_room & F ( red_room ) )", 0, 1024, 24
+"go through landmark three to the second floor .", "F ( landmark_3 & F ( second_floor ) )", 0, 1024, 16
+"go to the green room and avoid the purple room .", "F ( green_room & ~purple_room )", 0, 128, 8
+"avoid the blue room until you go to the third floor .", "~ ( blue_room ) U ( third_floor )", 0, 512, 32
+"go through the green room first then go to the red room .", "F ( green_room & F ( red_room ) )", 0, 1024, 40
+"without stepping outside of the blue room go to landmark two .", "F ( landmark_2 ) & G ( blue_room )", 0, 1024, 4
+"go to the orange room .", "F ( orange_room )", 0, 32, 2
+"stay in the green room and go to landmark two", "F ( landmark_2 ) & G ( green_room )", 0, 1024, 4
+"proceed to the purple room without going to any other floors .", "F ( purple_room ) & G ( third_floor )", 4, 1024, 8
+"stay on the second floor and go to the blue room .", "F ( blue_room ) & G ( second_floor )", 0, 1024, 4
+"go to landmark one then go to the second floor .", "F ( landmark_1 & F ( second_floor ) )", 0, 1024, 16
+"proceed to the red room but do n t leave the third floor .", "F ( red_room ) & G ( third_floor )", 0, 1024, 8
+"go through the green room before going to the orange room .", "F ( green_room & F ( orange_room ) )", 0, 1024, 16
+"go to the red room while avoiding landmark three", "F ( red_room & ~landmark_3 )", 0, 128, 8
+"stay on the second floor to get to landmark two .", "F ( landmark_2 ) & G ( second_floor )", 0, 1024, 8
+"always avoid the yellow room while navigating to the second floor .", "F ( second_floor & ~yellow_room )", 0, 128, 4
+"go to the purple room but avoid landmark one . if you reached to the purple room then you can head to landmark one or stay put .", "~ ( landmark_1 ) U ( purple_room )", 0, 512, 8
+"go to the blue room and if you have reached the blue room you may proceed to the orange room or stay in the blue room .", "~ ( orange_room ) U ( blue_room )", 2, 512, 40
+"go through landmark two to the blue room .", "F ( landmark_2 & F ( blue_room ) )", 0, 1024, 12
+"avoid the blue room", "F ( second_floor & ~blue_room )", -1, 128, 8
+"go to the orange room without going to the purple room . if you reached the orange room now you can go to the purple room .", "~ ( purple_room ) U ( orange_room )", 0, 512, 8
+"avoid the green room until passing landmark one .", "~ ( green_room ) U ( landmark_1 )", 0, 512, 8
+"avoid the blue room", "F ( third_floor & ~blue_room )", 0, 128, 8
+"go to the blue room through the twond floor", "F ( third_floor & F ( blue_room ) )", 0, 1024, 12
+"avoid the orange room until reaching the first floor .", "~ ( orange_room ) U ( first_floor )", 0, 512, 24
+"go to or through the red room . always avoid going to the red room through landmark two", "~ ( landmark_2 ) U ( red_room )", 0, 512, 8
+"go to the yellow room through landmark two", "F ( landmark_2 & F ( yellow_room ) )", 0, 1024, 24
+"go to the purple room while always avoiding the red room", "F ( purple_room & ~red_room )", 0, 128, 8
+"go to the purple room through landmark three .", "F ( landmark_3 & F ( purple_room ) )", 0, 1024, 24
+"avoid landmark one while traveling to landmark three . once there you may travel to landmark one .", "~ ( landmark_1 ) U ( landmark_3 )", 4, 512, 16
+"remain on the second floor and move to the green room .", "F ( green_room ) & G ( second_floor )", 0, 1024, 8
+"stay in the purple room and go to landmark one and stop", "F ( landmark_1 ) & G ( purple_room )", 0, 1024, 4
+"go from the onest floor to landmark three", "F ( third_floor & F ( landmark_3 ) )", 1, 1024, 12
+"proceed to the red room by going through the yellow room .", "F ( yellow_room & F ( red_room ) )", 0, 1024, 12
+"move to landmark two . do n t change floors if already on twond floor .", "F ( landmark_2 ) & G ( third_floor )", 0, 1024, 4
+"go to the blue room and avoid landmark three .", "F ( blue_room & ~landmark_3 )", 0, 128, 8
+"go from the green room to the orange room", "F ( green_room & F ( orange_room ) )", 0, 1024, 8
+"avoid the green room until after you ve gone to the blue room .", "~ ( green_room ) U ( blue_room )", 0, 512, 24
+"navigate to the second floor and avoid landmark three .", "F ( second_floor & ~landmark_3 )", 0, 128, 4
+"avoid the red room until going to the yellow room .", "~ ( red_room ) U ( yellow_room )", 1, 512, 12
+"go to landmark three through the green room", "F ( green_room & F ( landmark_3 ) )", 0, 1024, 16
+"go to the orange room without going to landmark two .", "F ( orange_room & ~landmark_2 )", 0, 128, 8
+"always avoid the purple room and go to the orange room .", "F ( orange_room & ~purple_room )", 0, 128, 4
+"avoid the purple room and go to the red room .", "F ( red_room & ~purple_room )", 0, 128, 4
+"avoid the red room until going through landmark three .", "~ ( red_room ) U ( landmark_3 )", 0, 512, 4
+"go to the first floor and avoid the red room .", "F ( first_floor & ~red_room )", 0, 128, 4
+"go to the first floor . if you reached the first floor then you may go to the blue room .", "~ ( blue_room ) U ( first_floor )", 0, 512, 24
+"pass through the purple room on your way to the second floor .", "F ( purple_room & F ( second_floor ) )", 0, 1024, 24
+"navigate to landmark three through the blue room .", "F ( blue_room & F ( landmark_3 ) )", 0, 1024, 40
+"go to landmark one through the first floor .", "F ( first_floor & F ( landmark_1 ) )", 0, 1024, 12
+"go to the second floor and then head to landmark three .", "F ( second_floor & F ( landmark_3 ) )", 0, 1024, 12
+"go to the threerd floor but do not go to landmark three .", "F ( third_floor & ~landmark_3 )", 0, 128, 8
+"go from onest floor to landmark three .", "F ( third_floor & F ( landmark_3 ) )", 1, 1024, 12
+"go to the yellow room and then navigate to the red room .", "F ( yellow_room & F ( red_room ) )", 0, 1024, 20
+"always avoid the yellow room and go to landmark three .", "F ( landmark_3 & ~yellow_room )", 0, 128, 4
+"avoid the yellow room and go to landmark two", "F ( landmark_2 & ~yellow_room )", 0, 128, 4
+"go to or through the twond floor while avoiding going through the yellow room", "~ ( yellow_room ) U ( first_floor )", -1, 512, 12
+"always avoid the yellow room and go to landmark one .", "F ( landmark_1 & ~yellow_room )", 0, 128, 4
+"go to landmark one by avoiding the purple room and then stay there or continue to the purple room .", "~ ( purple_room ) U ( landmark_1 )", 0, 512, 8
+"go to the orange room without going to the red room . if you reached the orange room now you can go to the red room .", "~ ( red_room ) U ( orange_room )", 2, 512, 16
+"go to the yellow room by avoiding landmark two . if you reached the yellow room then you can proceed to landmark two .", "~ ( landmark_2 ) U ( yellow_room )", 2, 512, 16
+"go to the orange room through the green room", "F ( green_room & F ( orange_room ) )", 4, 1024, 40
+"first go to the orange room and then go to landmark three .", "F ( orange_room & F ( landmark_3 ) )", 0, 1024, 8
+"go through the purple room to the third floor .", "F ( purple_room & F ( third_floor ) )", 0, 1024, 24
+"go to the twond floor but avoid the yellow room .", "F ( second_floor & ~yellow_room )", 1, 128, 4
+"go through the blue room before navigating to landmark one .", "F ( blue_room & F ( landmark_1 ) )", 0, 1024, 16
+"avoid landmark two until you pass through red room .", "~ ( landmark_2 ) U ( red_room )", 0, 512, 40
+"go to yellow room but do not go to orange room .", "F ( yellow_room & ~orange_room )", 0, 128, 8
+"go to the green room by avoiding landmark three . if you reached the green room then you can proceed to landmark three .", "~ ( landmark_3 ) U ( green_room )", 6, 512, 8
+"always avoid landmark one and navigate to landmark three .", "F ( landmark_3 & ~landmark_1 )", 0, 128, 8
+"go through the third floor to the first floor .", "F ( third_floor & F ( first_floor ) )", 2, 1024, 40
+"navigate to the third floor and then navigate to the second floor .", "F ( third_floor & F ( second_floor ) )", 0, 1024, 64
+"avoid the red room and go to landmark one", "F ( landmark_1 & ~red_room )", 0, 128, 4
+"avoid landmark one until after you go to landmark three .", "~ ( landmark_1 ) U ( landmark_3 )", 4, 512, 16
+"go to the orange room while avoiding the purple room and if you have reached the orange room then you can go to the purple room .", "~ ( purple_room ) U ( orange_room )", 0, 512, 4
+"stay in the blue room to navigate to landmark two .", "F ( landmark_2 ) & G ( blue_room )", 0, 1024, 4
+"go to landmark one without changing floors", "F ( landmark_1 ) & G ( second_floor )", -1, 1024, 4
+"go to the yellow room by first going through the red room .", "F ( red_room & F ( yellow_room ) )", 0, 1024, 40
+"go through landmark three to landmark one .", "F ( landmark_3 & F ( landmark_1 ) )", 2, 1024, 24
+"stay away from the purple room and go to landmark one .", "F ( landmark_1 & ~purple_room )", 0, 128, 4
+"go to the yellow room and avoid the purple room .", "F ( yellow_room & ~purple_room )", 0, 128, 8
+"stay in the blue room to get to landmark two .", "F ( landmark_2 ) & G ( blue_room )", 0, 1024, 4
+"go to the red room through the blue room", "F ( blue_room & F ( red_room ) )", 0, 1024, 16
+"do not navigate away from the second floor and go to the blue room .", "F ( blue_room ) & G ( second_floor )", 0, 1024, 8
+"move to landmark two but travel to the onest floor first .", "F ( second_floor & F ( landmark_2 ) )", -1, 1024, 24
+"go to landmark one from the first floor only .", "F ( landmark_1 ) & G ( first_floor )", 0, 1024, 8
+"remain on the second floor and move to the red room .", "F ( red_room ) & G ( second_floor )", 0, 1024, 4
+"pass through the orange room on your way to the third floor .", "F ( orange_room & F ( third_floor ) )", 0, 1024, 24
+"always pass landmark one before landmark three .", "F ( landmark_1 & F ( landmark_3 ) )", 0, 1024, 8
+"go to or through the first floor always avoid going through the orange room", "~ ( orange_room ) U ( first_floor )", 0, 512, 4
+"go to or through the twond floor while avoiding going through the purple room", "~ ( purple_room ) U ( second_floor )", -1, 512, 12
+"avoid the purple room on your way to landmark one .", "~ ( purple_room ) U ( landmark_1 )", 0, 512, 16
+"travel through the yellow room then go to the purple room .", "F ( yellow_room & F ( purple_room ) )", -1, 1024, 24
+"go to or through the twond floor while avoiding going through the red room", "~ ( red_room ) U ( third_floor )", 0, 512, 12
+"navigate to landmark two .", "F ( landmark_2 )", 0, 32, 2
+"go through the red room to the orange room .", "F ( red_room & F ( orange_room ) )", 6, 1024, 24
+"go to the twond floor while always avoiding the green room", "F ( third_floor & ~green_room )", 0, 128, 8
+"go to the second floor and then to landmark one .", "F ( second_floor & F ( landmark_1 ) )", 0, 1024, 12
+"go to landmark one by only stepping in the purple room .", "F ( landmark_1 ) & G ( purple_room )", 0, 1024, 16
+"navigate to the blue room then continue to landmark two .", "F ( blue_room & F ( landmark_2 ) )", 0, 1024, 12
+"head to landmark three after going to the blue room .", "F ( blue_room & F ( landmark_3 ) )", 0, 1024, 40
+"go to the first floor then go to the orange room .", "F ( first_floor & F ( orange_room ) )", 0, 1024, 12
+"navigate to the orange room by passing through the first floor .", "F ( first_floor & F ( orange_room ) )", 0, 1024, 12
+"avoid the yellow room until you go to the red room .", "~ ( yellow_room ) U ( red_room )", 0, 512, 8
+"do n t leave the yellow room and go to landmark three .", "F ( landmark_3 ) & G ( yellow_room )", 0, 1024, 4
+"do directly to landmark one without leaving the red room .", "F ( landmark_1 ) & G ( red_room )", 0, 1024, 8
+"avoid the green room until after navigating to the orange room .", "~ ( green_room ) U ( orange_room )", 0, 512, 12
+"avoid landmark three and go to the red room .", "F ( red_room & ~landmark_3 )", 0, 128, 4
+"pass through landmark three before going to the second floor .", "F ( landmark_3 & F ( second_floor ) )", 0, 1024, 16
+"go to or through the twond floor while avoiding going through the blue room", "~ ( blue_room ) U ( first_floor )", -1, 512, 16
+"move to landmark one and then proceed to the blue room .", "F ( landmark_1 & F ( blue_room ) )", 0, 1024, 8
+"go to landmark three and avoid the yellow room .", "F ( landmark_3 & ~yellow_room )", 0, 128, 4
+"go to the first floor by first going through the orange room .", "F ( orange_room & F ( first_floor ) )", 0, 1024, 16
+"without leaving the orange room go to landmark three .", "F ( landmark_3 ) & G ( orange_room )", 0, 1024, 4
+"move to the red room first then travel to landmark one .", "F ( red_room & F ( landmark_1 ) )", 0, 1024, 24
+"go to landmark three without changing floors .", "F ( landmark_3 ) & G ( third_floor )", 0, 1024, 4
+"go to the blue room by first going through landmark one .", "F ( landmark_1 & F ( blue_room ) )", 0, 1024, 16
+"avoid the orange room and go to the third floor . if you reached the third floor then you may go to the orange room or just stay on the third floor .", "~ ( orange_room ) U ( third_floor )", 0, 512, 36
+"move towards yellow room and then to first floor .", "F ( yellow_room & F ( first_floor ) )", 0, 1024, 24
+"go from the purple room to the red room", "F ( purple_room & F ( red_room ) )", 0, 1024, 4
+"avoid landmark one until navigating to the yellow room .", "~ ( landmark_1 ) U ( yellow_room )", 0, 512, 16
+"navigate to the purple room always avoiding the orange room .", "F ( purple_room & ~orange_room )", 1, 128, 4
+"move to landmark three without entering the green room . then you may stay at landmark three or go to the green room .", "~ ( green_room ) U ( landmark_3 )", 0, 512, 8
+"go to landmark three by only stepping in the purple room .", "F ( landmark_3 ) & G ( purple_room )", 0, 1024, 4
+"avoid the orange room on your way to the yellow room . once you get to the yellow room you can to the orange room .", "~ ( orange_room ) U ( yellow_room )", 4, 512, 16
+"proceed to the orange room by going through the blue room .", "F ( blue_room & F ( orange_room ) )", 1, 1024, 20
+"go to landmark two without leaving the blue room .", "F ( landmark_2 ) & G ( blue_room )", 0, 1024, 4
+"go to the twond floor but avoid the red room .", "F ( first_floor & ~red_room )", -1, 128, 8
+"go to the red room only through the onest floor", "F ( red_room ) & G ( third_floor )", 0, 1024, 4
+"go through the third floor and navigate to the red room .", "F ( third_floor & F ( red_room ) )", 0, 1024, 20
+"avoid landmark one until you go to the red room .", "~ ( landmark_1 ) U ( red_room )", 0, 512, 16
+"go to the orange room avoiding landmark two .", "F ( orange_room & ~landmark_2 )", 0, 128, 8
+"go through the blue room to landmark two .", "F ( blue_room & F ( landmark_2 ) )", 0, 1024, 24
+"navigate from the third floor to the red room .", "F ( third_floor & F ( red_room ) )", 0, 1024, 20
+"go to the red room and avoid landmark two .", "F ( red_room & ~landmark_2 )", 0, 128, 4
+"stay in the yellow room and go to landmark one .", "F ( landmark_1 ) & G ( yellow_room )", 0, 1024, 4
+"avoid the blue room until landmark one .", "~ ( blue_room ) U ( landmark_1 )", 14, 512, 40
+"move to the orange room without changing floors .", "F ( orange_room ) & G ( first_floor )", 4, 1024, 8
+"go to the second floor but do not go through the red room first .", "~ ( red_room ) U ( second_floor )", 0, 512, 16
+"go to or through the twond floor while avoiding going through the yellow room", "~ ( yellow_room ) U ( third_floor )", 0, 512, 12
+"go to the blue room but do not enter the yellow room first .", "~ ( yellow_room ) U ( blue_room )", 0, 512, 4
+"go to landmark one through the second floor .", "F ( second_floor & F ( landmark_1 ) )", 0, 1024, 12
+"proceed to the red room without going to any other floors .", "F ( red_room ) & G ( first_floor )", 2, 1024, 4
+"go to the first floor always avoiding the orange room .", "F ( first_floor & ~orange_room )", 0, 128, 4
+"go to the orange room without touching landmark two .", "F ( orange_room & ~landmark_2 )", 0, 128, 8
+"navigate to the green room then continue to landmark one .", "F ( green_room & F ( landmark_1 ) )", 0, 1024, 8
+"navigate to the orange room through the purple room .", "F ( purple_room & F ( orange_room ) )", 0, 1024, 24
+"remain on the second floor and navigate to the red room .", "F ( red_room ) & G ( second_floor )", 0, 1024, 4
+"go to the third floor and avoid landmark three .", "F ( third_floor & ~landmark_3 )", 0, 128, 4
+"go to the green room and go down to the onest floor .", "F ( green_room & F ( third_floor ) )", 8, 1024, 40
+"go to or through the purple room . always avoid going to the purple room through landmark one", "~ ( landmark_1 ) U ( purple_room )", 0, 512, 8
+"go to the first floor then navigate to the yellow room .", "F ( first_floor & F ( yellow_room ) )", 0, 1024, 8
+"avoid the yellow room and navigate to the orange room .", "F ( orange_room & ~yellow_room )", 2, 128, 4
+"go to or through the twond floor always avoid going through the orange room", "~ ( orange_room ) U ( second_floor )", -1, 512, 8
+"move to the yellow room without leaving the first floor .", "F ( yellow_room ) & G ( first_floor )", 0, 1024, 4
+"navigate from the first floor to the green room .", "F ( first_floor & F ( green_room ) )", 0, 1024, 8
+"go to yellow room but do not go to red room .", "F ( yellow_room & ~red_room )", 0, 128, 8
+"avoid the purple room until you go to the second floor .", "~ ( purple_room ) U ( second_floor )", 0, 512, 24
+"go to the twond floor but avoid the yellow room .", "F ( first_floor & ~yellow_room )", -1, 128, 4
+"go through the green room before navigating to landmark one .", "F ( green_room & F ( landmark_1 ) )", 0, 1024, 16
+"always go through landmark two and then to the red room .", "F ( landmark_2 & F ( red_room ) )", 0, 1024, 20
+"go to the purple room avoiding landmark two .", "F ( purple_room & ~landmark_2 )", 0, 128, 8
+"avoid the yellow room until navigating to the orange room .", "~ ( yellow_room ) U ( orange_room )", 0, 512, 8
+"go to landmark one and avoid the blue room .", "F ( landmark_1 & ~blue_room )", 0, 128, 8
+"avoid the orange room and go to landmark one .", "F ( landmark_1 & ~orange_room )", 0, 128, 4
+"navigate to the red room but never go to the orange room .", "F ( red_room & ~orange_room )", 0, 128, 4
+"avoid landmark two until going to the red room .", "~ ( landmark_2 ) U ( red_room )", 0, 512, 32
+"always avoid the green room and navigate to the second floor .", "F ( second_floor & ~green_room )", 0, 128, 2
+"move to the third floor and then head to landmark one .", "F ( third_floor & F ( landmark_1 ) )", 0, 1024, 4
+"go through the blue room first then go to the red room .", "F ( blue_room & F ( red_room ) )", 0, 1024, 24
+"go to second floor without going into the orange room", "F ( second_floor & ~orange_room )", 0, 128, 4
+"move to the orange room and then move to landmark one .", "F ( orange_room & F ( landmark_1 ) )", 0, 1024, 12
+"go to landmark two while always avoiding the blue room", "F ( landmark_2 & ~blue_room )", 0, 128, 4
+"go to landmark three while avoiding going through any other objects", "F ( landmark_3 ) & G ( second_floor )", -1, 1024, 4
+"go to the orange room while always avoiding landmark three", "F ( orange_room & ~landmark_3 )", 0, 128, 8
+"avoid the green room and go to landmark one .", "F ( landmark_1 & ~green_room )", 0, 128, 2
+"visit landmark three but do n t leave the second floor .", "F ( landmark_3 ) & G ( second_floor )", 0, 1024, 4
+"go to the second floor but avoid landmark one .", "F ( second_floor & ~landmark_1 )", 0, 128, 8
+"avoid the red room and go to the green room .", "F ( green_room & ~red_room )", 0, 128, 8
+"navigate to landmark one always avoiding landmark three .", "F ( landmark_1 & ~landmark_3 )", 4, 128, 8
+"pass through landmark one on your way to the first floor .", "F ( landmark_1 & F ( first_floor ) )", 0, 1024, 16
+"avoid landmark one until reaching the yellow room .", "~ ( landmark_1 ) U ( yellow_room )", 0, 512, 32
+"go through the red room before going to the orange room .", "F ( red_room & F ( orange_room ) )", 6, 1024, 24
+"go to the twond floor and then go to the blue room .", "F ( second_floor & F ( blue_room ) )", 0, 1024, 12
+"go to the purple room through the second floor", "F ( second_floor & F ( purple_room ) )", 0, 1024, 12
+"always go through the purple room and then to landmark three .", "F ( purple_room & F ( landmark_3 ) )", 0, 1024, 24
+"go to the third floor then navigate to the yellow room .", "F ( third_floor & F ( yellow_room ) )", 0, 1024, 8
+"go to landmark two via the second floor .", "F ( second_floor & F ( landmark_2 ) )", 0, 1024, 20
+"always go through the purple room and then to landmark two .", "F ( purple_room & F ( landmark_2 ) )", 0, 1024, 16
+"go to the green room while always avoiding the blue room", "F ( green_room & ~blue_room )", 0, 128, 8
+"always avoid landmark three and go to the orange room .", "F ( orange_room & ~landmark_3 )", 0, 128, 4
+"avoid the yellow room until going through landmark one .", "~ ( yellow_room ) U ( landmark_1 )", 0, 512, 24
+"go to landmark two but avoid landmark one .", "F ( landmark_2 & ~landmark_1 )", 0, 128, 8
+"go to landmark two through the red room", "F ( red_room & F ( landmark_2 ) )", 0, 1024, 40
+"go to the third floor avoiding the green room . if you get to third floor you can then proceed to the green room", "~ ( green_room ) U ( third_floor )", 0, 512, 32
+"go through landmark three before going to the green room .", "F ( landmark_3 & F ( green_room ) )", 0, 1024, 24
+"go to the first floor and then go to the green room .", "F ( first_floor & F ( green_room ) )", 0, 1024, 8
+"go to the orange room by first going through landmark two .", "F ( landmark_2 & F ( orange_room ) )", 0, 1024, 64
+"go to or through the third floor always avoid going through the blue room", "~ ( blue_room ) U ( third_floor )", 0, 512, 8
+"go to landmark three then go to the red room .", "F ( landmark_3 & F ( red_room ) )", 0, 1024, 12
+"avoid the blue room and go to the second floor .", "F ( second_floor & ~blue_room )", 0, 128, 8
+"avoid the yellow room until you go to the purple room .", "~ ( yellow_room ) U ( purple_room )", 0, 512, 16
+"go to the purple room and if you have reached the purple room you may proceed to the yellow room or stay in the purple room .", "~ ( yellow_room ) U ( purple_room )", 6, 512, 16
+"stay in the orange room to navigate to landmark three .", "F ( landmark_3 ) & G ( orange_room )", 0, 1024, 8
+"remain on the third floor and navigate to the yellow room .", "F ( yellow_room ) & G ( third_floor )", 0, 1024, 4
+"avoid the blue room until passing landmark one .", "~ ( blue_room ) U ( landmark_1 )", 10, 512, 24
+"avoid the blue room until you go to landmark one .", "~ ( blue_room ) U ( landmark_1 )", 10, 512, 32
+"avoid landmark three and move into the green room .", "F ( green_room & ~landmark_3 )", 4, 128, 8
+"avoid the green room until reaching landmark one .", "~ ( green_room ) U ( landmark_1 )", 0, 512, 4
+"navigate to the green room then continue to landmark three .", "F ( green_room & F ( landmark_3 ) )", 0, 1024, 24
+"always avoid going to landmark one through the orange room", "~ ( orange_room ) U ( landmark_1 )", 8, 512, 24
+"avoid the first and third floor and go to landmark three .", "F ( landmark_3 ) & G ( first_floor )", 4, 1024, 8
+"avoid the first floor and the third floor and go to landmark three .", "F ( landmark_3 ) & G ( second_floor )", -1, 1024, 4
+"go to landmark two .", "F ( landmark_2 ) & G ( second_floor )", -1, 1024, 4
+"navigate to the orange room then continue to landmark two .", "F ( orange_room & F ( landmark_2 ) )", 0, 1024, 20
+"go to the red room without going to the purple room .", "F ( red_room & ~purple_room )", 0, 128, 4
+"go to the blue room before going to the red room .", "F ( blue_room & F ( red_room ) )", 0, 1024, 20
+"do not go into the red room until going to landmark two", "~ ( red_room ) U ( landmark_2 )", 0, 512, 16
+"navigate to the third floor before going to the second floor .", "F ( third_floor & F ( second_floor ) )", 0, 1024, 64
+"go to the purple room and then go to landmark one .", "F ( purple_room & F ( landmark_1 ) )", 0, 1024, 24
+"go through the blue room to the third floor .", "F ( blue_room & F ( third_floor ) )", 0, 1024, 24
+"pass through landmark three before going to the first floor .", "F ( landmark_3 & F ( first_floor ) )", 0, 1024, 12
+"go to the purple room via landmark three .", "F ( landmark_3 & F ( purple_room ) )", 0, 1024, 24
+"avoid the orange room and travel to the yellow room .", "F ( yellow_room & ~orange_room )", 0, 128, 4
+"pass through the red room on your way to the first floor .", "F ( red_room & F ( first_floor ) )", 0, 1024, 16
+"go from the twond floor to the yellow room", "F ( second_floor & F ( yellow_room ) )", -1, 1024, 12
+"avoid the purple room and travel to the orange room .", "F ( orange_room & ~purple_room )", 0, 128, 8
+"visit the yellow room and then move to the third floor .", "F ( yellow_room & F ( third_floor ) )", 0, 1024, 36
+"avoid the red room until after going to the first floor .", "~ ( red_room ) U ( first_floor )", 0, 512, 4
+"go to landmark three and then go to the purple room .", "F ( landmark_3 & F ( purple_room ) )", 0, 1024, 12
+"go to the purple room by touching the yellow room .", "F ( yellow_room & F ( purple_room ) )", 6, 1024, 24
+"without stepping outside of the purple room go to landmark one .", "F ( landmark_1 ) & G ( purple_room )", 0, 1024, 4
+"go to landmark one and then go to the second floor .", "F ( landmark_1 & F ( second_floor ) )", 0, 1024, 16
+"without leaving the second floor go to the red room .", "F ( red_room ) & G ( second_floor )", 0, 1024, 4
+"avoid the red room and go to the second floor .", "F ( second_floor & ~red_room )", 0, 128, 4
+"avoid the orange room until you navigate to the second floor .", "~ ( orange_room ) U ( second_floor )", 0, 512, 8
+"move to the orange room without changing floors .", "F ( orange_room ) & G ( second_floor )", -1, 1024, 8
+"go to the first floor without going to the blue room .", "F ( first_floor & ~blue_room )", 0, 128, 4
+"go to the purple room by first visiting landmark three .", "F ( landmark_3 & F ( purple_room ) )", 0, 1024, 40
+"go to the twond floor avoiding the green room . if you reached the first floor you can stay there or head to the green room .", "~ ( green_room ) U ( first_floor )", 0, 512, 16
+"avoid landmark one until navigating to the orange room .", "~ ( landmark_1 ) U ( orange_room )", 0, 512, 32
+"always avoid the purple room go to the third floor .", "F ( third_floor & ~purple_room )", 0, 128, 8
+"first move to landmark one then navigate to the green room .", "F ( landmark_1 & F ( green_room ) )", 0, 1024, 8
+"go through the yellow room to landmark two .", "F ( yellow_room & F ( landmark_2 ) )", 0, 1024, 24
+"go to the green room through the yellow room .", "F ( yellow_room & F ( green_room ) )", 0, 1024, 24
+"go to the third floor then go to the yellow room", "F ( third_floor & F ( yellow_room ) )", 0, 1024, 8
+"go to the first floor via the blue room .", "F ( blue_room & F ( first_floor ) )", 0, 1024, 24
+"go to the blue room without going to another floor .", "F ( blue_room ) & G ( first_floor )", 0, 1024, 8
+"go through landmark three and navigate to the green room .", "F ( landmark_3 & F ( green_room ) )", 0, 1024, 24
+"go to the yellow room and then go to landmark two .", "F ( yellow_room & F ( landmark_2 ) )", 0, 1024, 20
+"go to the purple room and then navigate to the green room .", "F ( purple_room & F ( green_room ) )", 0, 1024, 12
+"go to the green room but avoid landmark one . if you reached to the green room then you can head to landmark one or stay put .", "~ ( landmark_1 ) U ( green_room )", 0, 512, 16
+"avoid the red room and go to landmark two", "F ( landmark_2 & ~red_room )", 0, 128, 4
+"go to the third floor before you go to the second floor .", "F ( third_floor & F ( second_floor ) )", 0, 1024, 64
+"go to the yellow room while avoiding landmark three", "F ( yellow_room & ~landmark_3 )", 0, 128, 8
+"go to the yellow room without going to the blue room .", "F ( yellow_room & ~blue_room )", 0, 128, 8
+"move to the second floor by going through the blue room", "F ( blue_room & F ( second_floor ) )", 0, 1024, 40
+"go to landmark two but do not first go through the yellow room .", "~ ( yellow_room ) U ( landmark_2 )", 4, 512, 16
+"go to landmark one while always avoiding the green room", "F ( landmark_1 & ~green_room )", -1, 1024, 4
+"go to the first floor and then go to the purple room .", "F ( first_floor & F ( purple_room ) )", 0, 1024, 8
+"go to landmark three and then go to the red room .", "F ( landmark_3 & F ( red_room ) )", 0, 1024, 20
+"visit landmark two but do n t leave the first floor .", "F ( landmark_2 ) & G ( first_floor )", 0, 1024, 4
+"go through the blue room then to the first floor .", "F ( blue_room & F ( first_floor ) )", 0, 1024, 16
+"go through the orange room first then go to the purple room .", "F ( orange_room & F ( purple_room ) )", 4, 1024, 16
+"go to the yellow room by first visiting landmark one .", "F ( landmark_1 & F ( yellow_room ) )", 0, 1024, 16
+"go to landmark one through the red room .", "F ( red_room & F ( landmark_1 ) )", 0, 1024, 24
+"avoid the yellow room until after going to the first floor .", "~ ( yellow_room ) U ( first_floor )", 0, 512, 4
+"go to or through the twond floor always avoid going through the purple room", "~ ( purple_room ) U ( second_floor )", -1, 512, 12
