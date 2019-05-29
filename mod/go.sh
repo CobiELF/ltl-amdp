@@ -1,2 +1,2 @@
 rm -f ~/job.sh.*
-qsub -l vlong -l vf=64G job.sh
+qsub -l short -l vf=64G job.sh

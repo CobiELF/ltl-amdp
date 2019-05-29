@@ -142,8 +142,8 @@ if __name__ == '__main__':
     pairs = []
     the_encoder, the_decoder = init(input_lang, output_lang)
     # TRAIN
-    train_input_lang, train_output_lang, train_pairs, train_max_length, train_max_tar_length = prepareData(train_src, train_tar, False)
-    eval(input_lang, output_lang, the_encoder, the_decoder, train_pairs, max_length, 100)
+    #train_input_lang, train_output_lang, train_pairs, train_max_length, train_max_tar_length = prepareData(train_src, train_tar, False)
+    #eval(input_lang, output_lang, the_encoder, the_decoder, train_pairs, max_length, 100)
     # TEST
-    #test_input_lang, test_output_lang, test_pairs, test_max_length, test_max_tar_length = prepareData(test_src, test_tar, False)
-    #eval(input_lang, output_lang, the_encoder, the_decoder, test_pairs, max_length, 100)
+    test_input_lang, test_output_lang, test_pairs, test_max_length, test_max_tar_length = prepareData(test_src, test_tar, False)
+    eval(input_lang, output_lang, the_encoder, the_decoder, test_pairs, max_length, 10)
