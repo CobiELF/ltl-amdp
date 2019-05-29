@@ -37,49 +37,60 @@ def init(input_lang, output_lang):
     the_decoder.eval()
     return the_encoder, the_decoder
 
-def getnis(index, decoder, decoder_hidden, encoder_outputs, k=1):
+def getnexts(index, decoder, decoder_hidden, encoder_outputs):
     decoder_input = Variable(torch.LongTensor([[index]]))
     decoder_input = decoder_input.cuda() if use_cuda else decoder_input
     decoder_output, decoder_hidden, decoder_attention = decoder(decoder_input, decoder_hidden, encoder_outputs)
-    topv, topi = decoder_output.data.topk(k)
-    nis = []
-    for i in range(k):
-        nis.append(topi[0][i].cpu().data.numpy().tolist())
-    return nis, decoder_hidden
+    topv, topi = decoder_output.data.topk(decoder_output.size()[-1])
+    nexts = []
+    for i in np.arange(decoder_output.size()[-1]):
+        next = topi[0][i].cpu().data.numpy().tolist()
+        nextscore = topv[0][i].cpu().data.numpy()
+        nexts.append((next, nextscore))
+    return nexts, decoder_hidden
 
 def translate(input_lang, output_lang, encoder, decoder, sentence, max_length, k):
+    # encoding
     input_variable = variableFromSentence(input_lang, ' '.join(list(reversed(sentence.split()))))
     input_length = input_variable.size()[0]
     encoder_hidden = encoder.initHidden()
     encoder_outputs = Variable(torch.zeros(max_length, encoder.hidden_size))
     encoder_outputs = encoder_outputs.cuda() if use_cuda else encoder_outputs
-    for ei in range(input_length):
+    for ei in np.arange(input_length):
         encoder_output, encoder_hidden = encoder(input_variable[ei],
                                                  encoder_hidden)
         encoder_outputs[ei] = encoder_outputs[ei] + encoder_output[0][0]
-    # expand the first seq, keeping track of alternative branches at each step
-    seqs = ["SOS"]
+    # beam search decoding of the one input sentence
     hidden = encoder_hidden
     index = SOS_token
+    seqs = [([index], 0.0)]
+    #print("translating:", sentence, flush=True)
+    # for each decoded token in the sequence
     while index != EOS_token:
-        nis, hidden = getnis(index, decoder, hidden, encoder_outputs, k)
-        nextseqs = []
-        # alternative steps are products of the branches
-        nexts = [output_lang.index2word[i] for i in nis]
-        # avoid products that affect grammatical structure
-        if "(" not in nexts[0] and ")" not in nexts[0]:
-            for next in nexts:
-                for seq in seqs:
-                    nextseq = seq+" "+next
-                    nextseqs.append(nextseq)
-        else:
-            for seq in seqs:
-                nextseq = seq+" "+nexts[0]
-                nextseqs.append(nextseq)
-        seqs = nextseqs
-        # just follow the first seq, since it's the only one likely to be grammatically correct
-        index = nis[0]
-    return [seq[4:-4] for seq in seqs]
+        # get the possible decodings of the next token, expand candidates
+        candidates = list()
+        nexts, hidden = getnexts(index, decoder, hidden, encoder_outputs)
+        for seq, score in seqs:
+            for next, nextscore in nexts:
+                candidate = (seq + [next], score - nextscore)
+                candidates.append(candidate)
+        # order all candidates by score, select k best, follow best decoding path
+        ordered = sorted(candidates, key=lambda t:t[1])
+        seqs = ordered[:k]
+        index = seqs[0][0][-1]
+        #print(seqs2sentences(seqs), flush=True)
+    return seqs
+
+def seqs2sentences(seqs):
+    sentences = list()
+    for seq, score in seqs:
+        sentence = ""
+        for i in seq:
+            if i!=SOS_token and i!=EOS_token:
+                word = str(output_lang.index2word[i])
+                sentence = sentence + word + " "
+        sentences.append(sentence[0:-1])
+    return sentences
 
 def valid_ltl(grounding):
     grammar = """
@@ -112,7 +123,7 @@ def eval(input_lang, output_lang, encoder, decoder, pairs, max_length, k):
     total = 0
     print('sentence,', 'trueltl,', 'rank,', 'variants,', 'goodvariants', flush=True)
     for sentence, true_ltl in pairs:
-        variants = translate(input_lang, output_lang, encoder, decoder, sentence, max_length, k)
+        variants = seqs2sentences(translate(input_lang, output_lang, encoder, decoder, sentence, max_length, k))
         goodvariants = [variant for variant in variants if valid_ltl(variant)]
         if true_ltl in goodvariants:
             correct = correct+1
@@ -132,8 +143,7 @@ if __name__ == '__main__':
     the_encoder, the_decoder = init(input_lang, output_lang)
     # TRAIN
     train_input_lang, train_output_lang, train_pairs, train_max_length, train_max_tar_length = prepareData(train_src, train_tar, False)
-    eval(input_lang, output_lang, the_encoder, the_decoder, train_pairs, max_length, 2)
+    eval(input_lang, output_lang, the_encoder, the_decoder, train_pairs, max_length, 100)
     # TEST
     #test_input_lang, test_output_lang, test_pairs, test_max_length, test_max_tar_length = prepareData(test_src, test_tar, False)
-    #eval(input_lang, output_lang, the_encoder, the_decoder, test_pairs, max_length, 2)
-
+    #eval(input_lang, output_lang, the_encoder, the_decoder, test_pairs, max_length, 100)
