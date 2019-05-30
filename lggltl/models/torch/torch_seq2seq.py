@@ -57,7 +57,8 @@ def main():
     #n_iters = 1000000
     if MODE == 0:
         split = int(len(pairs)*0.2)
-        train_pairs, test_pairs = pairs[split:], pairs[:split]
+        test_pairs = pairs[(split*4):]
+        train_pairs = pairs[:(split*4)]
         for (s, t) in train_pairs:
             with open('./TRAIN_SRC', 'a') as f:
                 f.write(str(s)+"\n")
@@ -73,8 +74,8 @@ def main():
         attn_decoder1.eval()
         print('\n\nEvaluating!\n')
         #evaluateRandomly(input_lang, output_lang, encoder1, attn_decoder1, pairs, MAX_LENGTH)
-        evaluateSelected(input_lang, output_lang, encoder1, attn_decoder1, test_pairs, MAX_LENGTH)
-        evaluateTraining(input_lang, output_lang, encoder1, attn_decoder1, train_pairs, MAX_LENGTH)
+        #evaluateSelected(input_lang, output_lang, encoder1, attn_decoder1, test_pairs, MAX_LENGTH)
+        #evaluateTraining(input_lang, output_lang, encoder1, attn_decoder1, train_pairs, MAX_LENGTH)
 
     elif MODE == 1:
         trainIters(input_lang, output_lang, encoder1, attn_decoder1, pairs, 10000, MAX_LENGTH, print_every=500)
@@ -203,8 +204,8 @@ def main():
 
     if SAVE:
         print('Serializing trained model...')
-        torch.save(encoder1.state_dict(), './pytorch_encoder')
-        torch.save(attn_decoder1.state_dict(), './pytorch_decoder')
+        torch.save(encoder1.state_dict(), './ENCODER')
+        torch.save(attn_decoder1.state_dict(), './DECODER')
         print('Serialized trained model to disk...')
 
     if CLI:
