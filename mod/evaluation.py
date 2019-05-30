@@ -20,12 +20,9 @@ random.seed(SEED)
 torch.manual_seed(SEED) if not use_cuda else torch.cuda.manual_seed(SEED)
 embed_size = 50
 hidden_size = 256
-all_src, all_tar, train_src, train_tar, test_src, test_tar = 'ALL_SRC', 'ALL_TAR', 'TRAIN_SRC', 'TRAIN_TAR', 'TEST_SRC', 'TEST_TAR'
-encoder_checkpoint = 'ENCODER'
-decoder_checkpoint = 'DECODER'
 
-# functions
-def init(input_lang, output_lang):
+# seq2seq functions
+def init(input_lang, output_lang, encoder_checkpoint, decoder_checkpoint):
     the_encoder = EncoderRNN(input_lang.n_words, embed_size, hidden_size)
     the_decoder = AttnDecoderRNN(embed_size, hidden_size, output_lang.n_words)
     if use_cuda:
@@ -81,6 +78,7 @@ def translate(input_lang, output_lang, encoder, decoder, sentence, max_length, k
         #print(seqs2sentences(seqs), flush=True)
     return seqs
 
+# helper functions
 def seqs2sentences(seqs):
     sentences = list()
     for seq, score in seqs:
@@ -118,6 +116,7 @@ def valid_ltl(grounding):
     except:
         return False
 
+# evaluation scripting
 def eval(input_lang, output_lang, encoder, decoder, pairs, max_length, k):
     correct = 0
     total = 0
@@ -135,15 +134,22 @@ def eval(input_lang, output_lang, encoder, decoder, pairs, max_length, k):
         print("\""+str(sentence)+"\",", "\""+str(true_ltl)+"\",", str(rank)+",", str(len(variants))+",", str(len(goodvariants)), flush=True)
     print("Final Accuracy:", correct/total)
 
-# main
+def eval2(input_lang, output_lang, encoder, decoder, pairs, max_length, k):
+    print('sentence,', 'variant,', 'trajectory,', 'translationtime,', 'solvetime', flush=True)
+    for sentence, true_ltl in pairs:
+        variants = seqs2sentences(translate(input_lang, output_lang, encoder, decoder, sentence, max_length, k))
+        goodvariants = [variant for variant in variants if valid_ltl(variant)]
+        for goodvariant in goodvariants:
+            print("\""+str(sentence)+"\",", "\""+str(goodvariant)+"\",", ",", ",", "", flush=True)
+
 if __name__ == '__main__':
     # ALL
-    input_lang, output_lang, pairs, max_length, max_tar_length = prepareData(all_src, all_tar, False)
+    input_lang, output_lang, pairs, max_length, max_tar_length = prepareData('ALL_SRC', 'ALL_TAR', False)
     pairs = []
-    the_encoder, the_decoder = init(input_lang, output_lang)
+    the_encoder, the_decoder = init(input_lang, output_lang, 'ENCODER_1', 'DECODER_1')
     # TRAIN
-    train_input_lang, train_output_lang, train_pairs, train_max_length, train_max_tar_length = prepareData(train_src, train_tar, False)
-    eval(input_lang, output_lang, the_encoder, the_decoder, train_pairs, max_length, 10)
+    #train_input_lang, train_output_lang, train_pairs, train_max_length, train_max_tar_length = prepareData('TRAIN_1_SRC', 'TRAIN_1_TAR', False)
+    #eval(input_lang, output_lang, the_encoder, the_decoder, train_pairs, max_length, 10)
     # TEST
-    #test_input_lang, test_output_lang, test_pairs, test_max_length, test_max_tar_length = prepareData(test_src, test_tar, False)
-    #eval(input_lang, output_lang, the_encoder, the_decoder, test_pairs, max_length, 10)
+    test_input_lang, test_output_lang, test_pairs, test_max_length, test_max_tar_length = prepareData('TEST_1_SRC', 'TEST_1_TAR', False)
+    eval2(input_lang, output_lang, the_encoder, the_decoder, test_pairs, max_length, 10)
