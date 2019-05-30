@@ -135,12 +135,12 @@ def eval(input_lang, output_lang, encoder, decoder, pairs, max_length, k):
     print("Final Accuracy:", correct/total)
 
 def eval2(input_lang, output_lang, encoder, decoder, pairs, max_length, k):
-    print('sentence,', 'variant,', 'trajectory,', 'translationtime,', 'solvetime', flush=True)
+    print('sentence,', 'variant,', 'correct,', 'trajectory,', 'translationtime,', 'solvetime', flush=True)
     for sentence, true_ltl in pairs:
         variants = seqs2sentences(translate(input_lang, output_lang, encoder, decoder, sentence, max_length, k))
         goodvariants = [variant for variant in variants if valid_ltl(variant)]
         for goodvariant in goodvariants:
-            print("\""+str(sentence)+"\",", "\""+str(goodvariant)+"\",", ",", ",", "", flush=True)
+            print("\""+str(sentence)+"\",", "\""+str(goodvariant)+"\",", str(true_ltl==goodvariant)+",", ",", ",", "", flush=True)
 
 if __name__ == '__main__':
     # ALL
