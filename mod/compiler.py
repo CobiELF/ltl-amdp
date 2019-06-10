@@ -1,5 +1,6 @@
 #imports
-from lark import Lark
+import sys
+from lark import Lark, tree
 
 ltl_grammar = """
     ltl : next
@@ -41,21 +42,27 @@ def make_ltl_ast(grounding):
 
     parser = Lark(ltl_grammar, start='ltl', ambiguity='explicit')
     tree = parser.parse(grounding)
-    
-    return tree
-
+    print(tree.pretty())
+    for subtree in tree.iter_subtrees():
+        print(subtree.children)
 
 def tests():
-    goal_1 = "(~ red_room) U green_room"
-    goal_2 = "F (red_room U green_room)"
-    goal_3 = "F (green_room U green_room)"
-    goal_4 = "(~ red_room) U green_room"
-    goal_5 = "F (red_room & green_room)"
-    goal_6 = "(~ green_room) & green_room"
+    """
+    LTL Goals:
+    1) ~ red_room U green_room
+    2) F red_room U green_room
+    3) F green_room U green_room
+    4) ~ red_room U green_room
+    5) F red_room & green_room
+    6) ~ green_room & green_room
+    """
 
-    make_ltl_ast(goal_1)
+    make_ltl_ast("(~red_room) U green_room") # 1
 
-    pass
+def make_png(grounding):
+    parser = Lark(ltl_grammar, start='ltl', ambiguity='explicit')
+    tree.pydot__tree_to_png(parser.parse(grounding), './parse.png')
 
 if __name__ == "__main__":
     tests()
+    make_png('(~red_room) U green_room')
