@@ -2,42 +2,10 @@
 import sys
 from lark import Lark, tree, Visitor, Transformer
 
-ltl_grammar = """
-    ltl : next
-        | future
-        | global
-        | until
-        | "(" ltl ")"
-        | state
-        | term
-    
-    next : "X" ltl
-
-    future : "F" ltl
-
-    global : "G" ltl
-
-    until : ltl "U" ltl
-
-    state : neg
-          | con
-    
-    neg : "~" ltl
-
-    con : ltl "&" ltl
-
-    term : TERM
-
-    TERM : "red_room" | "orange_room" | "yellow_room" | "green_room" | "blue_room" | "purple_room"
-            | "landmark_1" | "landmark_2" | "landmark_3" | "landmark_4" | "landmark_5"
-            | "first_floor" | "second_floor" | "third_floor" | "fourth_floor" | "fifth_floor"
-
-        %import common.WS
-        %ignore WS
-"""
-
 class LTLTransformer(Transformer):
     #TODO handle "futures" modifying "untils"
+    #TODO handle "futures" modifying "conjs"
+    
     def ltl(self, children):
         return children[0]
 
@@ -55,13 +23,14 @@ class LTLTransformer(Transformer):
         }""" % (children[0], children[1])
 
     def con(self, children):
-        return """
-        Robot.where[first] %s
-        Robot.where[first] %s
-        """ % (children[0], children[1])
+        return "Robot.where[first] %s \n Robot.where[first] %s" % (children[0], children[1])
 
     def future(self, children): #TODO
-        pass
+        if "u:Time" not in children[0]:
+            return ("some u:Time | { \n some t:u.^prev-u | %s" % children[0]).replace("first", "u", 1)
+
+        if "all t:u" in children[0]:
+            return children[0].replace("all t", "some t")
 
     def term(self, children):
         return "in %s.at" % children[0]
@@ -72,13 +41,13 @@ def make_ltl_ast(grounding):
     parse an ltl ast from a given grounding string
     """
 
-    parser = Lark(ltl_grammar, start='ltl', ambiguity='explicit')
+    parser = Lark(open('mod/ltl.lark').read(), start='ltl', ambiguity='explicit')
     ptree = parser.parse(grounding)
     
     return ptree
 
 def compile_tree(ptree, name="grounding"):
-    #TODO maybe make this take i na grounding then just do the whole thing?
+    #TODO maybe make this take in a grounding then just do the whole thing?
 
     print("pred %s {" % name)
     print(LTLTransformer().transform(ptree))
@@ -102,10 +71,11 @@ def tests():
     goal5 = make_ltl_ast("F (red_room & green_room)")
     goal6 = make_ltl_ast("(~ green_room) & green_room")
 
-    #TODO stuff with goals
+    for tree in [goal1, goal2, goal3, goal4, goal5, goal6]:
+        compile_tree(tree)
     
 def make_png(grounding):
-    parser = Lark(ltl_grammar, start='ltl', ambiguity='explicit')
+    parser = Lark(open('mod/ltl.lark'), start='ltl', ambiguity='explicit')
     tree.pydot__tree_to_png(parser.parse(grounding), './parse.png')
 
 if __name__ == "__main__":

@@ -1,0 +1,31 @@
+ltl : next
+    | future
+    | global
+    | until
+    | "(" ltl ")"
+    | state
+    | term
+
+next : "X" ltl
+
+future : "F" ltl
+
+global : "G" ltl
+
+until : ltl "U" ltl
+
+state : neg
+      | con
+
+neg : "~" ltl
+
+con : ltl "&" ltl
+
+term : TERM
+
+TERM : "red_room" | "orange_room" | "yellow_room" | "green_room" | "blue_room" | "purple_room"
+    | "landmark_1" | "landmark_2" | "landmark_3" | "landmark_4" | "landmark_5"
+    | "first_floor" | "second_floor" | "third_floor" | "fourth_floor" | "fifth_floor"
+
+    %import common.WS
+    %ignore WS
