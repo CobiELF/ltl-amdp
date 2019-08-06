@@ -3,8 +3,6 @@ import sys
 from lark import Lark, tree, Visitor, Transformer
 
 class LTLTransformer(Transformer):
-    #TODO handle "futures" modifying "untils"
-    #TODO handle "futures" modifying "conjs"
     
     def ltl(self, children):
         return children[0]
@@ -21,6 +19,9 @@ class LTLTransformer(Transformer):
             all t:u.^prev-u | Robot.where[t] %s
             Robot.where[u] %s
         }""" % (children[0], children[1])
+
+    def glob(self, children):
+        return children[0]
 
     def con(self, children):
         return "Robot.where[first] %s \n Robot.where[first] %s" % (children[0], children[1])
@@ -41,14 +42,15 @@ def make_ltl_ast(grounding):
     parse an ltl ast from a given grounding string
     """
 
-    parser = Lark(open('mod/ltl.lark').read(), start='ltl', ambiguity='explicit')
+    try:
+        parser = Lark(open('mod/ltl.lark').read(), start='ltl', ambiguity='explicit')
+    except FileNotFoundError:
+        parser = Lark(open('./ltl.lark').read(), start='ltl', ambiguity='explicit')
     ptree = parser.parse(grounding)
     
     return ptree
 
 def compile_tree(ptree, name="grounding"):
-    #TODO maybe make this take in a grounding then just do the whole thing?
-
     print("pred %s {" % name)
     print(LTLTransformer().transform(ptree))
     print("}")
@@ -79,5 +81,6 @@ def make_png(grounding):
     tree.pydot__tree_to_png(parser.parse(grounding), './parse.png')
 
 if __name__ == "__main__":
-    tests()
+    pass
+    #tests()
     #make_png('(~red_room) U green_room')

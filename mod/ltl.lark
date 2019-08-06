@@ -10,7 +10,7 @@ next : "X" ltl
 
 future : "F" ltl
 
-global : "G" ltl
+glob : "G" ltl
 
 until : ltl "U" ltl
 
