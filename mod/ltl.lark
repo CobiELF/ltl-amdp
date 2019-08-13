@@ -1,25 +1,19 @@
-ltl : next
-    | future
-    | global
+ltl : future
+    | glob
     | until
-    | "(" ltl ")"
-    | state
+    | neg
+    | con
     | term
 
-next : "X" ltl
-
-future : "F" ltl
-
-glob : "G" ltl
-
-until : ltl "U" ltl
-
-state : neg
-      | con
-
-neg : "~" ltl
+neg : "~" ltl | "~ (" ltl ")"
 
 con : ltl "&" ltl
+
+future : "F (" ltl ")"
+
+glob : "G (" ltl ")"
+
+until : ltl "U (" ltl ")" | ltl "U" ltl
 
 term : TERM
 

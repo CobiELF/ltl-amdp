@@ -7,34 +7,23 @@ class LTLTransformer(Transformer):
     def ltl(self, children):
         return children[0]
 
-    def state (self, children):
-        return children[0]
-
     def neg(self, children):
         return "not " + children[0]
     
-    def until(self, children):
-        return """
-        some u:Time | {
-            all t:u.^prev-u | Robot.where[t] %s
-            Robot.where[u] %s
-        }""" % (children[0], children[1])
+    def until(self, children): #TODO consider special cases
+        return "some u:Time | {\n\tall p:u.^prev-u | %s\n\t%s}" % (children[0].replace("[t]", "[p]"), children[1].replace("[t]", "[u]"))
 
     def glob(self, children):
-        return children[0]
+        return ("all g:Time | %s" % children[0].replace("[t]", "[g]"))
 
     def con(self, children):
-        return "Robot.where[first] %s \n Robot.where[first] %s" % (children[0], children[1])
+        return "(%s) and (%s)" % (children[0], children[1])
 
-    def future(self, children): #TODO
-        if "u:Time" not in children[0]:
-            return ("some u:Time | { \n some t:u.^prev-u | %s" % children[0]).replace("first", "u", 1)
-
-        if "all t:u" in children[0]:
-            return children[0].replace("all t", "some t")
+    def future(self, children):
+        return ("some f:Time | %s" % children[0].replace("[t]", "[f]"))
 
     def term(self, children):
-        return "in %s.at" % children[0]
+        return "Robot.where[t] in %s.at" % children[0]
 
 def make_ltl_ast(grounding):
     """
@@ -55,7 +44,7 @@ def compile_tree(ptree, name="grounding"):
     print(LTLTransformer().transform(ptree))
     print("}")
 
-def tests():
+def simple_tests():
     """
     LTL Goals:
     1) ~ red_room U green_room
@@ -76,11 +65,51 @@ def tests():
     for tree in [goal1, goal2, goal3, goal4, goal5, goal6]:
         compile_tree(tree)
     
+def big_tests():
+    simple = [
+        "G (landmark_1)",
+        "F (landmark_1)",
+        "landmark_1 U landmark_2",
+        "F (landmark_1) & G (landmark_2)",
+        "G (landmark_2) & F (landmark_1)",
+        "~ (landmark_1) U landmark_2",
+        "F (landmark_3 & F (first_floor))",
+        "G (landmark_3 & G (first_floor))",
+        "first_floor U ~yellow_room",
+        "~ (landmark_1) U G (first_floor)"
+    ]
+
+    for grounding in simple:
+        print(grounding)
+        compile_tree(make_ltl_ast(grounding))
+        print()
+
+def target_test(n):
+    fp = open("ALL_TAR", "r")
+
+    lineno=0
+    for line in fp:
+        if lineno > n:
+            break
+        else:
+            print(line)
+            compile_tree(make_ltl_ast(line))
+            print()
+
+    fp.close()
+
+def test_grounding(grounding):
+    print("Grounding: %s" % grounding)
+    compile_tree(make_ltl_ast(grounding))
+    print()
+
 def make_png(grounding):
-    parser = Lark(open('mod/ltl.lark'), start='ltl', ambiguity='explicit')
+    try:
+        parser = Lark(open('mod/ltl.lark').read(), start='ltl', ambiguity='explicit')
+    except FileNotFoundError:
+        parser = Lark(open('./ltl.lark').read(), start='ltl', ambiguity='explicit')
     tree.pydot__tree_to_png(parser.parse(grounding), './parse.png')
 
 if __name__ == "__main__":
-    pass
-    #tests()
-    #make_png('(~red_room) U green_room')
+    test_grounding("G (landmark_1) U yellow_room")
+    test_grounding("F (yellow_room) U (landmark_1)")
