@@ -46,6 +46,7 @@ def compile_tree(ptree, name="grounding"):
 
 def simple_tests():
     """
+    Examples given in alloy part of the project.
     LTL Goals:
     1) ~ red_room U green_room
     2) F red_room U green_room
@@ -66,7 +67,10 @@ def simple_tests():
         compile_tree(tree)
     
 def big_tests():
-    simple = [
+    """
+    Bigger, more comprehensive unit testing.
+    """
+    simple = [ #one operator, one term OR strict forms found commonly in target files
         "G (landmark_1)",
         "F (landmark_1)",
         "landmark_1 U landmark_2",
@@ -74,17 +78,17 @@ def big_tests():
         "G (landmark_2) & F (landmark_1)",
         "~ (landmark_1) U landmark_2",
         "F (landmark_3 & F (first_floor))",
-        "G (landmark_3 & G (first_floor))",
-        "first_floor U ~yellow_room",
-        "~ (landmark_1) U G (first_floor)"
+        "G (landmark_3 & G (first_floor))"
     ]
 
-    for grounding in simple:
-        print(grounding)
-        compile_tree(make_ltl_ast(grounding))
-        print()
+    wonky = [ # statements that don't translate correctly from LTL to alloy
+        "G (landmark_1) U yellow_room",
+        "F (yellow_room) U landmark_1"
+    ]
 
-def target_test(n):
+    pass #return tests that you want
+
+def target_test(n): #tests from target file
     fp = open("ALL_TAR", "r")
 
     lineno=0
@@ -98,12 +102,12 @@ def target_test(n):
 
     fp.close()
 
-def test_grounding(grounding):
+def test_grounding(grounding): # wrapper function for making the AST and compiling i
     print("Grounding: %s" % grounding)
     compile_tree(make_ltl_ast(grounding))
     print()
 
-def make_png(grounding):
+def make_png(grounding): # make a visual png of the AST for a given grounding. requires pydot package.
     try:
         parser = Lark(open('mod/ltl.lark').read(), start='ltl', ambiguity='explicit')
     except FileNotFoundError:
