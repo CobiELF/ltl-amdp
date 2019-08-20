@@ -3,8 +3,8 @@ import sys
 from lark import Lark, tree, Visitor, Transformer
 
 def until_replace(child):
-    # TODO make this work for children on both sides
-    if "some" in child or "all" in child:
+    # TODO make this work for children on both sides, and with globals
+    if "some" in child:
         childvar = child[child.index("[")+1]
         child = child.replace(childvar, "p")
 
@@ -130,4 +130,4 @@ def make_png(grounding): # make a visual png of the AST for a given grounding. r
     tree.pydot__tree_to_png(parser.parse(grounding), './parse.png')
 
 if __name__ == "__main__":
-    test_grounding("F (yellow_room) U landmark_1")
+    test_grounding("G (yellow_room) U landmark_1")
