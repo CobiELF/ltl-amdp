@@ -2,15 +2,27 @@
 import sys
 from lark import Lark, tree, Visitor, Transformer
 
-def until_replace(child):
-    # TODO make this work for children on both sides, and with globals
-    if "some" in child:
-        childvar = child[child.index("[")+1]
-        child = child.replace(childvar, "p")
+def until_replace(child, isLeft):
+    # TODO make this work for children on both sides, and with global
+    if isLeft:
+        if "some" in child: #F
+            childvar = child[child.index("[")+1]
+            child = child.replace(childvar, "p") #change previous variable to p
 
-        separatorloc = child.index("|")+2
-        #print(child[separatorloc:])
-        return child[separatorloc:]
+            separatorloc = child.index("|") + 2
+            return "some u:Time | {\n\tsome p:u.^prev-u | %s\n\t" % child[separatorloc:]
+
+        if "all" in child: #G
+            childvar = child[child.index("[")+1]
+            child = child.replace(childvar, "p") #change previous variable to p
+
+            separatorloc = child.index("|") + 2
+            return "some u:Time | {\n\tall p:u.^prev-u | %s\n\t" % child[separatorloc:]
+        else:
+            return "some u:Time | {\n\tall p:u.^prev-u | %s\n\t" % child
+
+    if not isLeft and "all" in child:
+        return child.replace("Time", "u.^next")
 
     else:
         return child.replace("[t]", "[p]")
@@ -24,9 +36,9 @@ class LTLTransformer(Transformer): #this actually does the transformation from a
         return "not " + children[0]
     
     def until(self, children): #TODO consider special cases
-        until_replace(children[0])
         #return "some u:Time | {\n\tall p:u.^prev-u | %s\n\t%s}" % (children[0].replace("[t]", "[p]"), children[1].replace("[t]", "[u]"))
-        return "some u:Time | {\n\tall p:u.^prev-u | %s\n\t%s}" % (until_replace(children[0]), children[1].replace("[t]", "[u]"))
+        #return "some u:Time | {\n\tall p:u.^prev-u | %s\n\t%s}" % (until_replace(children[0]), children[1].replace("[t]", "[u]"))
+        return until_replace(children[0], True) + until_replace(children[1], False) +"\n\t}"
 
     def glob(self, children):
         return ("all g:Time | %s" % children[0].replace("[t]", "[g]"))
@@ -130,4 +142,4 @@ def make_png(grounding): # make a visual png of the AST for a given grounding. r
     tree.pydot__tree_to_png(parser.parse(grounding), './parse.png')
 
 if __name__ == "__main__":
-    test_grounding("G (yellow_room) U landmark_1")
+    test_grounding("F (yellow_room) U F (landmark_1)")
