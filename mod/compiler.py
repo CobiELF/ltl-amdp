@@ -2,7 +2,20 @@
 import sys
 from lark import Lark, tree, Visitor, Transformer
 
-class LTLTransformer(Transformer):
+def until_replace(child):
+    # TODO make this work for children on both sides
+    if "some" in child or "all" in child:
+        childvar = child[child.index("[")+1]
+        child = child.replace(childvar, "p")
+
+        separatorloc = child.index("|")+2
+        #print(child[separatorloc:])
+        return child[separatorloc:]
+
+    else:
+        return child.replace("[t]", "[p]")
+
+class LTLTransformer(Transformer): #this actually does the transformation from ast to alloy string
     
     def ltl(self, children):
         return children[0]
@@ -11,7 +24,9 @@ class LTLTransformer(Transformer):
         return "not " + children[0]
     
     def until(self, children): #TODO consider special cases
-        return "some u:Time | {\n\tall p:u.^prev-u | %s\n\t%s}" % (children[0].replace("[t]", "[p]"), children[1].replace("[t]", "[u]"))
+        until_replace(children[0])
+        #return "some u:Time | {\n\tall p:u.^prev-u | %s\n\t%s}" % (children[0].replace("[t]", "[p]"), children[1].replace("[t]", "[u]"))
+        return "some u:Time | {\n\tall p:u.^prev-u | %s\n\t%s}" % (until_replace(children[0]), children[1].replace("[t]", "[u]"))
 
     def glob(self, children):
         return ("all g:Time | %s" % children[0].replace("[t]", "[g]"))
@@ -115,5 +130,4 @@ def make_png(grounding): # make a visual png of the AST for a given grounding. r
     tree.pydot__tree_to_png(parser.parse(grounding), './parse.png')
 
 if __name__ == "__main__":
-    test_grounding("G (landmark_1) U yellow_room")
-    test_grounding("F (yellow_room) U (landmark_1)")
+    test_grounding("F (yellow_room) U landmark_1")
