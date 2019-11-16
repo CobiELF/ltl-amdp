@@ -2,7 +2,6 @@
 target/
 *.iml
 *.py~
-*.tsv
 *.pyc
 *.DS_Store
 /venv/
