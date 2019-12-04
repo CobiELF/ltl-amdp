@@ -5,15 +5,15 @@ ltl : future
     | con
     | term
 
-neg : "~" ltl | "~ (" ltl ")"
+neg : "~" ltl | "~ (" ltl ")" // negation. word you should think of is "avoid."
 
-con : ltl "&" ltl
+con : ltl "&" ltl // "and"
 
-future : "F (" ltl ")"
+future : "F (" ltl ")" // instructions the robot should follow. write as commands. e.g. F ( step_1 & F ( step_2 ) ) means "do step 1 then step 2"
 
-glob : "G (" ltl ")"
+glob : "G (" ltl ")" // global. this should be true from the start of time to the end of time. e.g. "G ( ~ room_1 )" means "do not go to room 1"
 
-until : ltl "U (" ltl ")" | ltl "U" ltl
+until : ltl "U (" ltl ")" | ltl "U" ltl  // left condition should be true until right condition, then it doesn't matter
 
 term : TERM
 
