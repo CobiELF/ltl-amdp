@@ -141,7 +141,10 @@ if __name__ == "__main__":
     # print(sum([len(x) for x in [FN, FG, FA, GN, GA, UN, UU, UA]]))
     # print(sum([len(x) for x in [FGN, FAA, FAN, GNA, GAA, UUU, UUN, UUA, UAA, UNN, UAN, UNA, AFF, AFG, AGF]]))
 
-    with open("ltl-nl.txt", "w") as fp:
-        parser = Lark(open('mod/ltl.lark').read(), start='ltl', ambiguity='explicit')
-        for expr in one_op + two_op + three_op:
-            fp.write(expr + "\t" + LTLTransformer().transform(parser.parse(expr)) + "\n")
+    ops = [one_op, two_op, three_op]
+    for fname in ["ltl-nl_1op.tsv", "ltl-nl_2op.tsv", "ltl-nl_3op.tsv"]:
+        with open(fname, "w") as fp:
+            parser = Lark(open('mod/ltl.lark').read(), start='ltl', ambiguity='explicit')
+            for expr in ops[int(fname[7])-1]: # don't @ me
+                fp.write(expr + "\t" + LTLTransformer().transform(parser.parse(expr)) + "\n")
+            print("%s OPS PROCESSED" % fname[7])
