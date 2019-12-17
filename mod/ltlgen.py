@@ -152,80 +152,80 @@ if __name__ == "__main__":
     #train on 24+(33% of 252), test rest
     with open("COMP_TRAIN_1.tsv", "w") as fp_train:
         for expr in one_op:
-            fp_train.write(expr + "\t" + get_nl(parser, expr) + "\n")
+            fp_train.write(get_nl(parser, expr) + "\t" + expr + "\n")
         for ops in two_op:
             for op in ops[:len(ops)//3]:
-                fp_train.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_train.write(get_nl(parser, op) + "\t" + op + "\n")
     
     with open("COMP_TEST_1.tsv", "w") as fp_test:
         for ops in two_op:
             for op in ops[len(ops)//3:]:
-                fp_test.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_test.write(get_nl(parser, op) + "\t" + op + "\n")
         for ops in three_op:
             for op in ops:
-                fp_test.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_test.write(get_nl(parser, op) + "\t" + op + "\n")
 
     #SECOND SET
     # train on 24+(66% of 252), test rest
     with open("COMP_TRAIN_2.tsv", "w") as fp_train:
         for expr in one_op:
-            fp_train.write(expr + "\t" + get_nl(parser, expr) + "\n")
+            fp_train.write(get_nl(parser, expr) + "\t" + expr + "\n")
         for ops in two_op:
             for op in ops[:2*len(ops)//3]:
-                fp_train.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_train.write(get_nl(parser, op) + "\t" + op + "\n")
     
     with open("COMP_TEST_2.tsv", "w") as fp_test:
         for ops in two_op:
             for op in ops[2*len(ops)//3:]:
-                fp_test.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_test.write(get_nl(parser, op) + "\t" + op + "\n")
         for ops in three_op:
             for op in ops:
-                fp_test.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_test.write(get_nl(parser, op) + "\t" + op + "\n")
 
     #THIRD SET
     # train on 24+(100% of 252), test rest
     with open("COMP_TRAIN_3.tsv", "w") as fp_train:
         for expr in one_op:
-            fp_train.write(expr + "\t" + get_nl(parser, expr) + "\n")
+            fp_train.write(get_nl(parser, expr) + "\t" + expr + "\n")
         for ops in two_op:
             for op in ops:
-                fp_train.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_train.write(get_nl(parser, op) + "\t" + op + "\n")
     
     with open("COMP_TEST_3.tsv", "w") as fp_test:
         for ops in three_op:
             for op in ops:
-                fp_test.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_test.write(get_nl(parser, op) + "\t" + op + "\n")
 
     #FOURTH SET
     # train on 24+252+(33% of 2276), test rest
     with open("COMP_TRAIN_4.tsv", "w") as fp_train:
         for expr in one_op:
-            fp_train.write(expr + "\t" + get_nl(parser, expr) + "\n")
+            fp_train.write(get_nl(parser, expr) + "\t" + expr + "\n")
         for ops in two_op:
             for op in ops:
-                fp_train.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_train.write(get_nl(parser, op) + "\t" + op + "\n")
         for ops in three_op:
             for op in ops[:len(ops)//3]:
-                fp_train.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_train.write(get_nl(parser, op) + "\t" + op + "\n")
     
     with open("COMP_TEST_4.tsv", "w") as fp_test:
         for ops in three_op:
             for op in ops[len(ops)//3:]:
-                fp_test.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_test.write(get_nl(parser, op) + "\t" + op + "\n")
 
     #FIFTH SET
     # train on 24+252+(66% of 2276), test rest
     with open("COMP_TRAIN_5.tsv", "w") as fp_train:
         for expr in one_op:
-            fp_train.write(expr + "\t" + get_nl(parser, expr) + "\n")
+            fp_train.write(get_nl(parser, expr) + "\t" + expr + "\n")
         for ops in two_op:
             for op in ops:
-                fp_train.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_train.write(get_nl(parser, op) + "\t" + op + "\n")
         for ops in three_op:
             for op in ops[:2*len(ops)//3]:
-                fp_train.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_train.write(get_nl(parser, op) + "\t" + op + "\n")
     
     with open("COMP_TEST_5.tsv", "w") as fp_test:
         for ops in three_op:
             for op in ops[2*len(ops)//3:]:
-                fp_test.write(op + "\t" + get_nl(parser, op) + "\n")
+                fp_test.write(get_nl(parser, op) + "\t" + op + "\n")
