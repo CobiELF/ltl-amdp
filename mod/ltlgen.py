@@ -64,8 +64,6 @@ if __name__ == "__main__":
     U = add_binop(TERMS, "U", TERMS)
     # & does not make sense without time quantification inside/outside
 
-
-
     # 2ops (~~,~F,~G,~U,~&)
     # assume nots are distributed in so dont worry about applying
 
