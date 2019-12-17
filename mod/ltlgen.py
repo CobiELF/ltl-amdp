@@ -148,6 +148,9 @@ if __name__ == "__main__":
     
     parser = Lark(open('./ltl.lark').read(), start='ltl', ambiguity='explicit')
 
+    random.shuffle(one_op)
+    for ops in two_op + three_op:
+        random.shuffle(ops)
     #FIRST SET
     #train on 24+(33% of 252), test rest
     with open("COMP_TRAIN_1.tsv", "w") as fp_train:
