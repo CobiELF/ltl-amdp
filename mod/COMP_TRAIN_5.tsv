@@ -1,0 +1,1784 @@
+F ( red_room )	go to the red room
+F ( first_floor )	go to the first floor
+F ( landmark_1 )	go to landmark one
+F ( green_room )	go to the green room
+G ( red_room )	always the red room
+G ( first_floor )	always the first floor
+G ( landmark_1 )	always landmark one
+G ( green_room )	always the green room
+( red_room ) U ( red_room )	the red room until the red room
+( red_room ) U ( first_floor )	the red room until the first floor
+( red_room ) U ( landmark_1 )	the red room until landmark one
+( red_room ) U ( green_room )	the red room until the green room
+( first_floor ) U ( red_room )	the first floor until the red room
+( first_floor ) U ( first_floor )	the first floor until the first floor
+( first_floor ) U ( landmark_1 )	the first floor until landmark one
+( first_floor ) U ( green_room )	the first floor until the green room
+( landmark_1 ) U ( red_room )	landmark one until the red room
+( landmark_1 ) U ( first_floor )	landmark one until the first floor
+( landmark_1 ) U ( landmark_1 )	landmark one until landmark one
+( landmark_1 ) U ( green_room )	landmark one until the green room
+( green_room ) U ( red_room )	the green room until the red room
+( green_room ) U ( first_floor )	the green room until the first floor
+( green_room ) U ( landmark_1 )	the green room until landmark one
+( green_room ) U ( green_room )	the green room until the green room
+F ( ~ ( red_room ) )	the green room until the green room
+F ( ~ ( first_floor ) )	the green room until the green room
+F ( ~ ( landmark_1 ) )	the green room until the green room
+F ( ~ ( green_room ) )	the green room until the green room
+F ( G ( red_room ) )	the green room until the green room
+F ( G ( first_floor ) )	the green room until the green room
+F ( G ( landmark_1 ) )	the green room until the green room
+F ( G ( green_room ) )	the green room until the green room
+F ( ( red_room ) & ( red_room ) )	the green room until the green room
+F ( ( red_room ) & ( first_floor ) )	the green room until the green room
+F ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+F ( ( red_room ) & ( green_room ) )	the green room until the green room
+F ( ( first_floor ) & ( red_room ) )	the green room until the green room
+F ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+F ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+F ( ( first_floor ) & ( green_room ) )	the green room until the green room
+F ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+F ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+F ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+F ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+F ( ( green_room ) & ( red_room ) )	the green room until the green room
+F ( ( green_room ) & ( first_floor ) )	the green room until the green room
+F ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+F ( ( green_room ) & ( green_room ) )	the green room until the green room
+G ( ~ ( red_room ) )	the green room until the green room
+G ( ~ ( first_floor ) )	the green room until the green room
+G ( ~ ( landmark_1 ) )	the green room until the green room
+G ( ~ ( green_room ) )	the green room until the green room
+G ( ( red_room ) & ( red_room ) )	the green room until the green room
+G ( ( red_room ) & ( first_floor ) )	the green room until the green room
+G ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+G ( ( red_room ) & ( green_room ) )	the green room until the green room
+G ( ( first_floor ) & ( red_room ) )	the green room until the green room
+G ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+G ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+G ( ( first_floor ) & ( green_room ) )	the green room until the green room
+G ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+G ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+G ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+G ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+G ( ( green_room ) & ( red_room ) )	the green room until the green room
+G ( ( green_room ) & ( first_floor ) )	the green room until the green room
+G ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+G ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ~ ( red_room ) ) U ( red_room )	the green room until the green room
+( ~ ( red_room ) ) U ( first_floor )	the green room until the green room
+( ~ ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ~ ( red_room ) ) U ( green_room )	the green room until the green room
+( ~ ( first_floor ) ) U ( red_room )	the green room until the green room
+( ~ ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ~ ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ~ ( first_floor ) ) U ( green_room )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ~ ( green_room ) ) U ( red_room )	the green room until the green room
+( ~ ( green_room ) ) U ( first_floor )	the green room until the green room
+( ~ ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ~ ( green_room ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( red_room )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( green_room )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( red_room )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) & ( green_room ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) & ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) & ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) & ( green_room ) ) U ( green_room )	the green room until the green room
+( ( green_room ) & ( red_room ) ) U ( red_room )	the green room until the green room
+( ( green_room ) & ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) & ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) & ( red_room ) ) U ( green_room )	the green room until the green room
+( ( green_room ) & ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( green_room ) & ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) & ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) & ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( green_room ) & ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( green_room ) & ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) & ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) & ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( green_room ) & ( green_room ) ) U ( red_room )	the green room until the green room
+( ( green_room ) & ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) & ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) & ( green_room ) ) U ( green_room )	the green room until the green room
+( red_room ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( red_room ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( red_room ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( red_room ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( landmark_1 ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( landmark_1 ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( landmark_1 ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( landmark_1 ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( landmark_1 ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( landmark_1 ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( landmark_1 ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( landmark_1 ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( landmark_1 ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( landmark_1 ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( landmark_1 ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( landmark_1 ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( landmark_1 ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( landmark_1 ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( landmark_1 ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( landmark_1 ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( green_room ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( green_room ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( green_room ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( green_room ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( green_room ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( green_room ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( green_room ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( green_room ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( green_room ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( green_room ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( green_room ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( green_room ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( green_room ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( green_room ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( green_room ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( green_room ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+F ( G ( ~ ( red_room ) ) )	the green room until the green room
+F ( G ( ~ ( first_floor ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( red_room ) & ( red_room ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( red_room ) & ( first_floor ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( red_room ) & ( landmark_1 ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( red_room ) & ( green_room ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( first_floor ) & ( red_room ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( first_floor ) & ( first_floor ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( first_floor ) & ( landmark_1 ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( first_floor ) & ( green_room ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( landmark_1 ) & ( red_room ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( landmark_1 ) & ( first_floor ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( landmark_1 ) & ( landmark_1 ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( landmark_1 ) & ( green_room ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( green_room ) & ( red_room ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( green_room ) & ( first_floor ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( green_room ) & ( landmark_1 ) ) )	the green room until the green room
+F ( ( red_room ) & ( ( green_room ) & ( green_room ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( red_room ) & ( red_room ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( red_room ) & ( first_floor ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( red_room ) & ( landmark_1 ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( red_room ) & ( green_room ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( first_floor ) & ( red_room ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( first_floor ) & ( first_floor ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( first_floor ) & ( landmark_1 ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( first_floor ) & ( green_room ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( landmark_1 ) & ( red_room ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( landmark_1 ) & ( first_floor ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( landmark_1 ) & ( landmark_1 ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( landmark_1 ) & ( green_room ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( green_room ) & ( red_room ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( green_room ) & ( first_floor ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( green_room ) & ( landmark_1 ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ( green_room ) & ( green_room ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ( red_room ) & ( red_room ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ( red_room ) & ( first_floor ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ( red_room ) & ( landmark_1 ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ( red_room ) & ( green_room ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ( first_floor ) & ( red_room ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ( first_floor ) & ( first_floor ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ( first_floor ) & ( landmark_1 ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ( first_floor ) & ( green_room ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ( landmark_1 ) & ( red_room ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ( landmark_1 ) & ( first_floor ) ) )	the green room until the green room
+F ( ( red_room ) & ( ~ ( red_room ) ) )	the green room until the green room
+F ( ( red_room ) & ( ~ ( first_floor ) ) )	the green room until the green room
+F ( ( red_room ) & ( ~ ( landmark_1 ) ) )	the green room until the green room
+F ( ( red_room ) & ( ~ ( green_room ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ~ ( red_room ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ~ ( first_floor ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ~ ( landmark_1 ) ) )	the green room until the green room
+F ( ( first_floor ) & ( ~ ( green_room ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ~ ( red_room ) ) )	the green room until the green room
+F ( ( landmark_1 ) & ( ~ ( first_floor ) ) )	the green room until the green room
+G ( ( ~ ( red_room ) ) & ( red_room ) )	the green room until the green room
+G ( ( ~ ( red_room ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ~ ( red_room ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ~ ( red_room ) ) & ( green_room ) )	the green room until the green room
+G ( ( ~ ( first_floor ) ) & ( red_room ) )	the green room until the green room
+G ( ( ~ ( first_floor ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ~ ( first_floor ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ~ ( first_floor ) ) & ( green_room ) )	the green room until the green room
+G ( ( ~ ( landmark_1 ) ) & ( red_room ) )	the green room until the green room
+G ( ( ~ ( landmark_1 ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( red_room ) & ( red_room ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( red_room ) & ( red_room ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( red_room ) & ( red_room ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ( red_room ) & ( red_room ) ) & ( green_room ) )	the green room until the green room
+G ( ( ( red_room ) & ( first_floor ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( red_room ) & ( first_floor ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( red_room ) & ( first_floor ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ( red_room ) & ( first_floor ) ) & ( green_room ) )	the green room until the green room
+G ( ( ( red_room ) & ( landmark_1 ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( red_room ) & ( landmark_1 ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( red_room ) & ( landmark_1 ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ( red_room ) & ( landmark_1 ) ) & ( green_room ) )	the green room until the green room
+G ( ( ( red_room ) & ( green_room ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( red_room ) & ( green_room ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( red_room ) & ( green_room ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ( red_room ) & ( green_room ) ) & ( green_room ) )	the green room until the green room
+G ( ( ( first_floor ) & ( red_room ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( first_floor ) & ( red_room ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( first_floor ) & ( red_room ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ( first_floor ) & ( red_room ) ) & ( green_room ) )	the green room until the green room
+G ( ( ( first_floor ) & ( first_floor ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( first_floor ) & ( first_floor ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( first_floor ) & ( first_floor ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ( first_floor ) & ( first_floor ) ) & ( green_room ) )	the green room until the green room
+G ( ( ( first_floor ) & ( landmark_1 ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( first_floor ) & ( landmark_1 ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( first_floor ) & ( landmark_1 ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ( first_floor ) & ( landmark_1 ) ) & ( green_room ) )	the green room until the green room
+G ( ( ( first_floor ) & ( green_room ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( first_floor ) & ( green_room ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( first_floor ) & ( green_room ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ( first_floor ) & ( green_room ) ) & ( green_room ) )	the green room until the green room
+G ( ( ( landmark_1 ) & ( red_room ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( landmark_1 ) & ( red_room ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( landmark_1 ) & ( red_room ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ( landmark_1 ) & ( red_room ) ) & ( green_room ) )	the green room until the green room
+G ( ( ( landmark_1 ) & ( first_floor ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( landmark_1 ) & ( first_floor ) ) & ( first_floor ) )	the green room until the green room
+G ( ( ( landmark_1 ) & ( first_floor ) ) & ( landmark_1 ) )	the green room until the green room
+G ( ( ( landmark_1 ) & ( first_floor ) ) & ( green_room ) )	the green room until the green room
+G ( ( ( landmark_1 ) & ( landmark_1 ) ) & ( red_room ) )	the green room until the green room
+G ( ( ( landmark_1 ) & ( landmark_1 ) ) & ( first_floor ) )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( red_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( first_floor ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( landmark_1 ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) U ( green_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( red_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( first_floor ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( landmark_1 ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) U ( green_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( red_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( first_floor ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( landmark_1 ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) U ( green_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( red_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( first_floor ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( landmark_1 ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) U ( green_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( red_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( red_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( green_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) U ( green_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( red_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( red_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( green_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) U ( green_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( red_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( red_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( green_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) U ( green_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( red_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( red_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( green_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) U ( green_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( red_room ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( red_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( green_room ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) U ( green_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) U ( red_room ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) U ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) U ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) U ( red_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) U ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( ( ~ ( red_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ~ ( red_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( red_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( red_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ~ ( red_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ~ ( red_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( red_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( red_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ~ ( red_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ~ ( red_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( red_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( red_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ~ ( red_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ~ ( red_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( red_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( red_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( first_floor ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( landmark_1 ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ~ ( green_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ~ ( green_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( green_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( green_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ~ ( green_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ~ ( green_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( green_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( green_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ~ ( green_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ~ ( green_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( green_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( green_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ~ ( green_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ~ ( green_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ~ ( green_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ~ ( green_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( red_room ) U ( ( ~ ( red_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ~ ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ~ ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ~ ( red_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ~ ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ~ ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ~ ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ~ ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ~ ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ~ ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ~ ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ~ ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ~ ( green_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ~ ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ~ ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ~ ( green_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ~ ( red_room ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ~ ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ~ ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ~ ( red_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ~ ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( red_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( first_floor ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( landmark_1 ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( red_room ) & ( green_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( red_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( first_floor ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( landmark_1 ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( first_floor ) & ( green_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( red_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( first_floor ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( landmark_1 ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( landmark_1 ) & ( green_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( red_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( first_floor ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( landmark_1 ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( red_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( red_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( red_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( red_room ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( first_floor ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( first_floor ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( first_floor ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( first_floor ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( landmark_1 ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( landmark_1 ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( landmark_1 ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( landmark_1 ) ) U ( green_room )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( green_room ) ) U ( red_room )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( green_room ) ) U ( first_floor )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( green_room ) ) U ( landmark_1 )	the green room until the green room
+( ( ( green_room ) & ( green_room ) ) U ( green_room ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( red_room ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( first_floor ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( red_room ) U ( ( green_room ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( red_room ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( first_floor ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( first_floor ) U ( ( green_room ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( red_room ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( first_floor ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( landmark_1 ) U ( ( green_room ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( red_room ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( first_floor ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( landmark_1 ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( red_room ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( red_room ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( red_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( red_room ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( first_floor ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( first_floor ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( first_floor ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( first_floor ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( landmark_1 ) ) ) U ( green_room )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( green_room ) ) ) U ( red_room )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( green_room ) ) ) U ( first_floor )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( green_room ) ) ) U ( landmark_1 )	the green room until the green room
+( ( green_room ) U ( ( green_room ) & ( green_room ) ) ) U ( green_room )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( red_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( red_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( green_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( red_room ) & ( green_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( red_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( red_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( green_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( first_floor ) & ( green_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( red_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( red_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( green_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( landmark_1 ) & ( green_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( red_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( red_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( green_room ) ) U ( red_room ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( red_room ) U ( ( ( green_room ) & ( green_room ) ) U ( green_room ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( red_room ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( red_room ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( red_room ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( red_room ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( first_floor ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( first_floor ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( first_floor ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( first_floor ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( landmark_1 ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( landmark_1 ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( landmark_1 ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( landmark_1 ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( green_room ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( green_room ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( green_room ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( red_room ) U ( ( green_room ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( red_room ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( red_room ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( red_room ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( red_room ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( first_floor ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( first_floor ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( first_floor ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( first_floor ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( landmark_1 ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( landmark_1 ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( landmark_1 ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( landmark_1 ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( green_room ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( green_room ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( green_room ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( first_floor ) U ( ( green_room ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( red_room ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( red_room ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( red_room ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( red_room ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( first_floor ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( first_floor ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( first_floor ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( first_floor ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( landmark_1 ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( landmark_1 ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( landmark_1 ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( landmark_1 ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( green_room ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( green_room ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( green_room ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( landmark_1 ) U ( ( green_room ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( red_room ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( red_room ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( red_room ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( red_room ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( first_floor ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( first_floor ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( first_floor ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( first_floor ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( landmark_1 ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( landmark_1 ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( landmark_1 ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( landmark_1 ) & ( green_room ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( green_room ) & ( red_room ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( green_room ) & ( first_floor ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( green_room ) & ( landmark_1 ) ) )	the green room until the green room
+( red_room ) U ( ( green_room ) U ( ( green_room ) & ( green_room ) ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( red_room ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( red_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( green_room ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( red_room ) & ( green_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( red_room ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( red_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( landmark_1 ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( landmark_1 ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( green_room ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( green_room ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( green_room ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( first_floor ) & ( green_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( landmark_1 ) & ( red_room ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( landmark_1 ) & ( red_room ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( landmark_1 ) & ( red_room ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( landmark_1 ) & ( red_room ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( landmark_1 ) & ( first_floor ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( landmark_1 ) & ( first_floor ) ) U ( first_floor ) )	the green room until the green room
+( first_floor ) U ( ( ( landmark_1 ) & ( first_floor ) ) U ( landmark_1 ) )	the green room until the green room
+( first_floor ) U ( ( ( landmark_1 ) & ( first_floor ) ) U ( green_room ) )	the green room until the green room
+( first_floor ) U ( ( ( landmark_1 ) & ( landmark_1 ) ) U ( red_room ) )	the green room until the green room
+( first_floor ) U ( ( ( landmark_1 ) & ( landmark_1 ) ) U ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( red_room ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( first_floor ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( landmark_1 ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ( red_room ) & ( green_room ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( red_room ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( first_floor ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( landmark_1 ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ( first_floor ) & ( green_room ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( red_room ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ~ ( landmark_1 ) )	the green room until the green room
+( ( landmark_1 ) & ( first_floor ) ) U ( ~ ( green_room ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ~ ( red_room ) )	the green room until the green room
+( ( landmark_1 ) & ( landmark_1 ) ) U ( ~ ( first_floor ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ~ ( red_room ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( landmark_1 ) & ( landmark_1 ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( landmark_1 ) & ( green_room ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( green_room ) & ( red_room ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( green_room ) & ( first_floor ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( green_room ) & ( landmark_1 ) )	the green room until the green room
+( ~ ( first_floor ) ) U ( ( green_room ) & ( green_room ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ( red_room ) & ( red_room ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ( red_room ) & ( first_floor ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ( red_room ) & ( landmark_1 ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ( red_room ) & ( green_room ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ( first_floor ) & ( red_room ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ( first_floor ) & ( first_floor ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ( first_floor ) & ( landmark_1 ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ( first_floor ) & ( green_room ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ( landmark_1 ) & ( red_room ) )	the green room until the green room
+( ~ ( landmark_1 ) ) U ( ( landmark_1 ) & ( first_floor ) )	the green room until the green room
+( F ( red_room ) ) & ( F ( red_room ) )	the green room until the green room
+( F ( red_room ) ) & ( F ( first_floor ) )	the green room until the green room
+( F ( red_room ) ) & ( F ( landmark_1 ) )	the green room until the green room
+( F ( red_room ) ) & ( F ( green_room ) )	the green room until the green room
+( F ( first_floor ) ) & ( F ( red_room ) )	the green room until the green room
+( F ( first_floor ) ) & ( F ( first_floor ) )	the green room until the green room
+( F ( first_floor ) ) & ( F ( landmark_1 ) )	the green room until the green room
+( F ( first_floor ) ) & ( F ( green_room ) )	the green room until the green room
+( F ( landmark_1 ) ) & ( F ( red_room ) )	the green room until the green room
+( F ( landmark_1 ) ) & ( F ( first_floor ) )	the green room until the green room
+( F ( red_room ) ) & ( G ( red_room ) )	the green room until the green room
+( F ( red_room ) ) & ( G ( first_floor ) )	the green room until the green room
+( F ( red_room ) ) & ( G ( landmark_1 ) )	the green room until the green room
+( F ( red_room ) ) & ( G ( green_room ) )	the green room until the green room
+( F ( first_floor ) ) & ( G ( red_room ) )	the green room until the green room
+( F ( first_floor ) ) & ( G ( first_floor ) )	the green room until the green room
+( F ( first_floor ) ) & ( G ( landmark_1 ) )	the green room until the green room
+( F ( first_floor ) ) & ( G ( green_room ) )	the green room until the green room
+( F ( landmark_1 ) ) & ( G ( red_room ) )	the green room until the green room
+( F ( landmark_1 ) ) & ( G ( first_floor ) )	the green room until the green room
+( G ( red_room ) ) & ( F ( red_room ) )	the green room until the green room
+( G ( red_room ) ) & ( F ( first_floor ) )	the green room until the green room
+( G ( red_room ) ) & ( F ( landmark_1 ) )	the green room until the green room
+( G ( red_room ) ) & ( F ( green_room ) )	the green room until the green room
+( G ( first_floor ) ) & ( F ( red_room ) )	the green room until the green room
+( G ( first_floor ) ) & ( F ( first_floor ) )	the green room until the green room
+( G ( first_floor ) ) & ( F ( landmark_1 ) )	the green room until the green room
+( G ( first_floor ) ) & ( F ( green_room ) )	the green room until the green room
+( G ( landmark_1 ) ) & ( F ( red_room ) )	the green room until the green room
+( G ( landmark_1 ) ) & ( F ( first_floor ) )	the green room until the green room
