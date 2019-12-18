@@ -37,7 +37,7 @@ class LTLTransformer(Transformer):
         return children[0]
 
     def neg(self, children):
-        return "do not " + children[0]
+        return "not " + children[0]
 
     def until(self, children):
         return children[0] + " until " + children[1]
@@ -49,7 +49,7 @@ class LTLTransformer(Transformer):
         return children[0] + " and " + children[1]
 
     def future(self, children):
-        return "go to " + children[0]
+        return "eventually " + children[0]
 
     def term(self, children):
         nls = {}
