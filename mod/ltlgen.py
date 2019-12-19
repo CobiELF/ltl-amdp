@@ -142,9 +142,9 @@ if __name__ == "__main__":
     one_op = F + G + U
     two_op = [FN , FG , FA , GN , GA , UN , UU , UA]
     three_op = [FGN , FAA , FAN , GNA , GAA , UUU , UUN , UUA , UAA , UNN , UAN , UNA , AFF , AFG , AGF]
-    # print(sum([len(x) for x in [F + G, U]]))
-    # print(sum([len(x) for x in [FN, FG, FA, GN, GA, UN, UU, UA]]))
-    # print(sum([len(x) for x in [FGN, FAA, FAN, GNA, GAA, UUU, UUN, UUA, UAA, UNN, UAN, UNA, AFF, AFG, AGF]]))
+    print(sum([len(x) for x in [F + G, U]]))
+    print(sum([len(x) for x in [FN, FG, FA, GN, GA, UN, UU, UA]]))
+    print(sum([len(x) for x in [FGN, FAA, FAN, GNA, GAA, UUU, UUN, UUA, UAA, UNN, UAN, UNA, AFF, AFG, AGF]]))
     
     parser = Lark(open('./ltl.lark').read(), start='ltl', ambiguity='explicit')
 
@@ -235,19 +235,19 @@ if __name__ == "__main__":
     #             fp_test.write(get_nl(parser, op) + "\t" + op + "\n")
 
     for i in range(5):
-        with open("THROP_TRAIN_" + str(i+1) + ".tsv", "w") as fp:
+        with open("THROP_tiny_TRAIN_" + str(i+1) + ".tsv", "w") as fp:
             for expr in one_op:
                 fp.write(get_nl(parser, expr) + "\t" + expr + "\n")
             for ops in two_op:
                 for op in ops:
                     fp.write(get_nl(parser, op) + "\t" + op + "\n")
             for ops in three_op:
-                for op in ops[:i*(len(ops)//5)]:
+                for op in ops[:i*(len(ops)//25)]:
                     fp.write(get_nl(parser, op) + "\t" + op + "\n")
         print("Wrote three-op training file " + str(i+1))
         
-        with open("THROP_TEST_" + str(i+1) + ".tsv", "w") as fp:
+        with open("THROP_tiny_TEST_" + str(i+1) + ".tsv", "w") as fp:
             for ops in three_op:
-                for op in ops[i*(len(ops)//5):]:
+                for op in ops[i*(len(ops)//25):]:
                     fp.write(get_nl(parser, op) + "\t" + op + "\n")
         print("Wrote three-op test file " + str(i+1))
