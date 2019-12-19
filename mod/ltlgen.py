@@ -235,19 +235,22 @@ if __name__ == "__main__":
     #             fp_test.write(get_nl(parser, op) + "\t" + op + "\n")
 
     for i in range(5):
-        with open("THROP_tiny_TRAIN_" + str(i+1) + ".tsv", "w") as fp:
+        with open("THROP_very_tiny_TRAIN_" + str(i+1) + ".tsv", "w") as fp:
             for expr in one_op:
                 fp.write(get_nl(parser, expr) + "\t" + expr + "\n")
             for ops in two_op:
                 for op in ops:
                     fp.write(get_nl(parser, op) + "\t" + op + "\n")
             for ops in three_op:
-                for op in ops[:i*(len(ops)//25)]:
+                for op in ops[:i]:
                     fp.write(get_nl(parser, op) + "\t" + op + "\n")
         print("Wrote three-op training file " + str(i+1))
         
-        with open("THROP_tiny_TEST_" + str(i+1) + ".tsv", "w") as fp:
+        with open("THROP_very_tiny_TEST_" + str(i+1) + ".tsv", "w") as fp:
             for ops in three_op:
-                for op in ops[i*(len(ops)//25):]:
+                for op in ops[i:]:
                     fp.write(get_nl(parser, op) + "\t" + op + "\n")
         print("Wrote three-op test file " + str(i+1))
+
+    for opspace in three_op:
+        print("&" + random.choice(opspace).replace("~", "$\\sim$").replace("&", "\\&"))
